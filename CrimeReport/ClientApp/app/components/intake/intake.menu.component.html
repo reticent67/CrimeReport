@@ -1,0 +1,75 @@
+﻿<!--
+<div class="container">
+    <div class="row form-group">
+        <nav class="menu-wrap">
+            <ul class="nav navbar-nav nav-pills">
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['./intake-details']">
+                        <h4 class="list-group-item-heading">Step 1</h4>
+                        <p class="list-group-item-text">First step description</p>
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['./intake-people']">
+                        <h4 class="list-group-item-heading">Step 2</h4>
+                        <p class="list-group-item-text">Second step description</p>
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a href="#step-3">
+                        <h4 class="list-group-item-heading">Step 3</h4>
+                        <p class="list-group-item-text">Third step description</p>
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a href="#step-4">
+                        <h4 class="list-group-item-heading">Step 4</h4>
+                        <p class="list-group-item-text">Second step description</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+-->
+
+
+
+
+
+
+<div class="menu-wrap">
+    <ul class="app-menu">
+        <li class="menu-item" [routerLinkActive]="['link-active']">
+            <a [routerLink]="['./intake-details']">
+                <span class="item-number">1</span>
+                <div class="menu-text">Details</div>
+            </a>
+        </li>
+        <li class="menu-item" [routerLinkActive]="['link-active']">
+            <a [routerLink]="['./intake-people']">
+                <span class="item-number">2</span>
+                <div class="menu-text">People</div>
+            </a>
+        </li>
+        <li class="menu-item" [routerLinkActive]="['link-active']">
+            <a [routerLink]="['./intake-cars']">
+                <span class="item-number">3</span>
+                <div class="menu-text">Item 3</div>
+            </a>
+        </li>
+        <li class="menu-item" [routerLinkActive]="['link-active']">
+            <a [routerLink]="['./intake-cars']">
+                <span class="item-number">4</span>
+                <div class="menu-text">Item 4</div>
+            </a>
+        </li>
+        <li class="menu-item" [routerLinkActive]="['link-active']">
+            <a [routerLink]="['./intake-cars']">
+                <span class="item-number">5</span>
+                <div class="menu-text">Item 5</div>
+            </a>
+        </li>
+    </ul>
+</div>

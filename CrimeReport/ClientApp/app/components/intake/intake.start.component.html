@@ -1,0 +1,14 @@
+﻿<div class="page-header text-center">
+    <h2>New Investigative Report</h2>
+</div>
+<div class="container">
+    <intake-menu></intake-menu>
+</div>
+<div class="container form-layout">
+    <form id="msform">
+        <router-outlet></router-outlet>
+    </form>
+</div>
+<div>
+    <pre> {{ reportFormData.value | json }}</pre>
+</div>
