@@ -13,6 +13,8 @@ const treeShakableModules = [
     '@angular/platform-browser-dynamic',
     '@angular/router',
     'zone.js',
+    '@angular/material',
+    '@angular/material/prebuilt-themes/indigo-pink.css'
 ];
 const nonTreeShakableModules = [
     'bootstrap',
