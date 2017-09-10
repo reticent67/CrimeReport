@@ -1,0 +1,15 @@
+md-grid-tile {
+    background: lightblue;
+}
+
+.menu-wrap {
+    display: inline-block;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    md-grid-tile {
+        width: 48px;
+        height: 48px;
+    }
+}

@@ -1,7 +1,21 @@
 <h1>Counter</h1>
 
-<p>This is a simple example of an Angular component.</p>
 
-<p>Current count: <strong>{{ currentCount }}</strong></p>
+<md-expansion-panel class="col-md-6">
+    <md-expansion-panel-header>
+        <md-panel-title>
+            Personal data
+        </md-panel-title>
+        <md-panel-description>
+            Type your name and age
+        </md-panel-description>
+    </md-expansion-panel-header>
 
-<button (click)="incrementCounter()">Increment</button>
+    <md-form-field>
+        <input mdInput placeholder="First name">
+    </md-form-field>
+
+    <md-form-field>
+        <input mdInput placeholder="Age">
+    </md-form-field>
+</md-expansion-panel>
