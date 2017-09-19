@@ -1,0 +1,70 @@
+<form [formGroup]="formShell" (ngSubmit)="save(formShell)">
+
+    <!-- Begin People Array -->
+
+    <div formArrayName="people">
+        <div *ngFor="let person of formShell.controls.people.controls; let i=index" class="panel panel-default">
+            <!-- Angular assigns array index as group name by default 0, 1, 2, ... -->
+            <div [formGroupName]="i" class="panel-body">
+                <md-accordion>
+                    <md-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle="false">
+                        <md-expansion-panel-header>
+                            <md-panel-title>
+                                Person {{i + 1}}
+                            </md-panel-title>
+                            <md-panel-description>
+                                <md-icon *ngIf="formShell.controls.people.controls.length > 1" (click)="removePerson(i)">account_circle</md-icon>
+                            </md-panel-description>
+                        </md-expansion-panel-header>
+                        <md-form-field>
+                            <input mdInput placeholder="Last Name" formControlName="lastName">
+                        </md-form-field>
+                        <md-form-field>
+                            <input mdInput placeholder="First Name" formControlName="firstName">
+                        </md-form-field>
+                        <md-form-field>
+                            <input mdInput placeholder="Middle Name" formControlName="middleName">
+                        </md-form-field>
+
+                        <div class="panel">
+                            <div formArrayName="addresses">
+                                <div *ngFor="let address of person.controls.addresses.controls; let j=index" class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <span>Address {{j + 1}}</span>
+                                        <span class="glyphicon glyphicon-remove pull-right" *ngIf="person.controls.addresses.controls.length > 1" (click)="removeAddress(person, j)"></span>
+                                    </div>
+                                    <div class="panel-body" [formGroupName]="j">
+                                        <div class="col-xs-12">
+                                            <md-form-field>
+                                                <input mdInput placeholder="Address" formControlName="street">
+                                            </md-form-field>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <!-- Begin Address Array -->
+                            <button (click)="addAddress(person)" class="btn btn-primary">
+                                    Add another Address +
+                            </button>
+                        </div>
+                    </md-expansion-panel>
+                </md-accordion>
+            </div>
+        </div>
+    </div>
+
+    <!-- End People Array-->
+    <div class="row">
+        <button (click)="addPerson()" class="btn btn-primary">
+            Add another person +
+        </button>
+    </div>
+    <!-- Submit Button-->
+    <div class="row">
+        <div class="form-group text-center">
+            <button class="btn btn-success" type="submit"> Next <span style="margin-left: 10px;" class="glyphicon glyphicon-arrow-right"></span></button>
+        </div>
+    </div>
+</form>

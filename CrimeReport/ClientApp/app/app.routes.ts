@@ -2,7 +2,7 @@
 import { MainMenuComponent } from './components/mainmenu/mainmenu.component';
 import { NewCRStartComponent } from './components/newCrimeReport/newCR.start.component';
 import { NewCRDetailsComponent } from './components/newCrimeReport/newCR.details.component';
-//import { IntakePeopleComponent } from './components/intake/intake.people.component';
+import { NewCRPeopleComponent } from './components/newCrimeReport/newCR.people.component';
 
 
 export const routes: Routes = [
@@ -12,7 +12,7 @@ export const routes: Routes = [
         children: [
            { path: '', redirectTo: 'newCR-details', pathMatch: 'full' },
            { path: 'newCR-details', component: NewCRDetailsComponent },
-    //        { path: 'intake-people', component: IntakePeopleComponent },
+           { path: 'newCR-people', component: NewCRPeopleComponent },
        ]
     },
     {path: '**', redirectTo: 'main-menu'}

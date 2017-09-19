@@ -1,5 +1,4 @@
-﻿
-<md-card class="center">
+﻿<md-card class="center col-md-8">
     <form [formGroup]="detailsForm" (ngSubmit)="save(detailsForm)" class="center">
         <div class="tab-pane fade in active">
             <h4 class="text-center">{{title}}</h4>
@@ -12,12 +11,12 @@
                 <input mdInput placeholder="Incident Number" formControlName="incidentNum">
             </md-form-field>
         </p>
-        <md-form-field>
+        <md-form-field class="col-md-4">
             <input mdInput [mdDatepicker]="occurranceStart" placeholder="Start Date">
             <md-datepicker-toggle mdSuffix [for]="occurranceStart"></md-datepicker-toggle>
             <md-datepicker touchUi="true" #occurranceStart></md-datepicker>
         </md-form-field>
-        <md-form-field>
+        <md-form-field class="col-md-4">
             <input mdInput placeholder="Start Time" type="time">
         </md-form-field>
         <p>
@@ -27,19 +26,17 @@
                 <md-datepicker touchUi="true" #occurranceEnd></md-datepicker>
             </md-form-field>
         </p>
-       
+
         <p>
             <md-form-field>
                 <input mdInput placeholder="Location" formControlName="occurranceLoc">
             </md-form-field>
         </p>
 
-
-        <div class="form-group text-center">
-            <button [routerLinkActive]="['link-active']" [routerLink]="['../intake-people']" class="btn btn-info" type-="submit"> Next <span style="margin-left: 10px;" class="glyphicon glyphicon-arrow-right"></span></button>
-        </div>
-
+        <md-action-row>
+            <div class="form-group text-center">
+                <button [routerLinkActive]="['link-active']" [routerLink]="['../newCR-people']" class="btn btn-info" type-="submit"> Next <span style="margin-left: 10px;" class="glyphicon glyphicon-arrow-right"></span></button>
+            </div>
+        </md-action-row>
     </form>
 </md-card>
-
-    

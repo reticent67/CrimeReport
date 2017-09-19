@@ -9,8 +9,9 @@ import { AppRoutes } from './app.routes';
 import { AppComponent } from './components/app/app.component';
 import { MainMenuComponent } from './components/mainmenu/mainmenu.component';
 import { NewCRStartComponent } from './components/newCrimeReport/newCR.start.component';
-import { NewCRProgBarComponent } from './components/newCrimeReport/newCR.progbar.component';
+import { NewCRProgBarComponent } from './components/newCrimeReport/newCR.progBar.component';
 import { NewCRDetailsComponent } from './components/newCrimeReport/newCR.details.component';
+import { NewCRPeopleComponent } from './components/newCrimeReport/newCR.people.component';
 
 
 
@@ -21,7 +22,8 @@ import { NewCRDetailsComponent } from './components/newCrimeReport/newCR.details
         MainMenuComponent,
         NewCRStartComponent,
         NewCRProgBarComponent,
-        NewCRDetailsComponent
+        NewCRDetailsComponent,
+        NewCRPeopleComponent,
         
     ],
     imports: [
