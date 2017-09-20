@@ -13,7 +13,7 @@
                                 Person {{i + 1}}
                             </md-panel-title>
                             <md-panel-description>
-                                <md-icon *ngIf="formShell.controls.people.controls.length > 1" (click)="removePerson(i)">account_circle</md-icon>
+                                <md-icon class="pull-right" *ngIf="formShell.controls.people.controls.length > 1" (click)="removePerson(i)">delete</md-icon>
                             </md-panel-description>
                         </md-expansion-panel-header>
                         <md-form-field>
@@ -33,7 +33,7 @@
                                 <div *ngFor="let address of person.controls.addresses.controls; let j=index" class="panel panel-primary">
                                     <div class="panel-heading">
                                         <span>Address {{j + 1}}</span>
-                                        <span class="glyphicon glyphicon-remove pull-right" *ngIf="person.controls.addresses.controls.length > 1" (click)="removeAddress(person, j)"></span>
+                                        <md-icon class="pull-right" *ngIf="person.controls.addresses.controls.length > 1" (click)="removeAddress(person, j)">delete</md-icon>
                                     </div>
                                     <div class="panel-body" [formGroupName]="j">
                                         <div class="col-xs-12">
@@ -53,23 +53,19 @@
                         </div>
                     </md-expansion-panel>
                 </md-accordion>
-               
             </div>
         </div>
     </div>
 
     <!-- End People Array-->
-    
     <!-- Submit Button-->
     <div class="row">
         <div class="center">
-            <button md-raised-button color="primary" (click)="addPerson()">
-                Add another person +
-            </button>
+            <button md-raised-button color="primary" (click)="addPerson()">Add person<md-icon class="pull-right">person_add</md-icon></button>
         </div>
         <div class="form-group text-center">
-            <button  md-raised-button type="submit"><span style="margin-right: 10px;" class="glyphicon glyphicon-arrow-left"></span>Previous </button>
-            <button md-raised-button type="submit"> Next <span style="margin-left: 10px;" class="glyphicon glyphicon-arrow-right"></span></button>
+            <button md-raised-button type="submit"><md-icon>navigate_before</md-icon>Previous </button>
+            <button md-raised-button type="submit"> Next <md-icon>navigate_next</md-icon></button>
         </div>
     </div>
 </form>
