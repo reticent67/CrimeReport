@@ -2,12 +2,12 @@
 
     <!-- Begin People Array -->
 
-    <div formArrayName="people">
+    <div formArrayName="people" class="center">
         <div *ngFor="let person of formShell.controls.people.controls; let i=index" class="panel panel-default">
             <!-- Angular assigns array index as group name by default 0, 1, 2, ... -->
-            <div [formGroupName]="i" class="panel-body">
+            <div [formGroupName]="i">
                 <md-accordion>
-                    <md-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle="false">
+                    <md-expansion-panel [expanded]="step === 0" (opened)="setStep(0)">
                         <md-expansion-panel-header>
                             <md-panel-title>
                                 Person {{i + 1}}
@@ -22,9 +22,11 @@
                         <md-form-field>
                             <input mdInput placeholder="First Name" formControlName="firstName">
                         </md-form-field>
-                        <md-form-field>
-                            <input mdInput placeholder="Middle Name" formControlName="middleName">
-                        </md-form-field>
+                        <p>
+                            <md-form-field>
+                                <input mdInput placeholder="Middle Name" formControlName="middleName">
+                            </md-form-field>
+                        </p>
 
                         <div class="panel">
                             <div formArrayName="addresses">
@@ -46,25 +48,28 @@
                         <div>
                             <!-- Begin Address Array -->
                             <button (click)="addAddress(person)" class="btn btn-primary">
-                                    Add another Address +
+                                Add another Address +
                             </button>
                         </div>
                     </md-expansion-panel>
                 </md-accordion>
+               
             </div>
         </div>
     </div>
 
     <!-- End People Array-->
-    <div class="row">
-        <button (click)="addPerson()" class="btn btn-primary">
-            Add another person +
-        </button>
-    </div>
+    
     <!-- Submit Button-->
     <div class="row">
+        <div class="center">
+            <button md-raised-button color="primary" (click)="addPerson()">
+                Add another person +
+            </button>
+        </div>
         <div class="form-group text-center">
-            <button class="btn btn-success" type="submit"> Next <span style="margin-left: 10px;" class="glyphicon glyphicon-arrow-right"></span></button>
+            <button  md-raised-button type="submit"><span style="margin-right: 10px;" class="glyphicon glyphicon-arrow-left"></span>Previous </button>
+            <button md-raised-button type="submit"> Next <span style="margin-left: 10px;" class="glyphicon glyphicon-arrow-right"></span></button>
         </div>
     </div>
 </form>
