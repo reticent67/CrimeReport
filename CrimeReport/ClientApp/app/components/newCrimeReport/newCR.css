@@ -19,6 +19,7 @@ a {
 
 .menu-wrap {
     position: relative;
+    width: 75%;
     margin-bottom: 6px;
     margin-top: 10px;
     max-height: 96px;
@@ -36,7 +37,7 @@ a {
     .menu-wrap::-webkit-scrollbar {
         display: none;
     }
-
+    
 .app-menu {
     list-style: none;
     width: 100%;
@@ -109,6 +110,18 @@ a {
     border-color: transparent #0F7F8C #0F7F8C transparent;
     z-index: -1;
 }
+/*End Progress Bar*/
+
+.person-type {
+    border-radius: 5px;
+    border: 2px solid #0F7F8C;
+}
+
+    .person-type:hover {
+        background: #0F7F8C;
+        color: #FFFFFF;
+    }
+
 
 @media only screen and (max-width: 900px) {
     .body-content {
