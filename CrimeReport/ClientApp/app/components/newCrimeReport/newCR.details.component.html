@@ -11,25 +11,21 @@
                 <input mdInput placeholder="Incident Number" formControlName="incidentNum">
             </md-form-field>
         </p>
-        <md-form-field >
-            <input mdInput [mdDatepicker]="occurranceStart" (focus)="occurranceStart.open()" placeholder="Start Date">
+        <md-form-field class="col-md-4">
+            <input mdInput [mdDatepicker]="occurranceStart" placeholder="Start Date">
             <md-datepicker-toggle mdSuffix [for]="occurranceStart"></md-datepicker-toggle>
             <md-datepicker touchUi="true" #occurranceStart></md-datepicker>
         </md-form-field>
-        <md-form-field >
+        <md-form-field class="col-md-4">
             <input mdInput placeholder="Start Time" type="time">
         </md-form-field>
-
-       
+        <p>
             <md-form-field>
-                <input mdInput [mdDatepicker]="occurranceEnd" (focus)="occurranceEnd.open()" placeholder="End Date">
+                <input mdInput [mdDatepicker]="occurranceEnd" placeholder="End Date">
                 <md-datepicker-toggle mdSuffix [for]="occurranceEnd"></md-datepicker-toggle>
-                <md-datepicker #occurranceEnd touchUi="true"></md-datepicker>
+                <md-datepicker touchUi="true" #occurranceEnd></md-datepicker>
             </md-form-field>
-            <md-form-field >
-                <input mdInput placeholder="End Time" type="time">
-            </md-form-field>
-      
+        </p>
 
         <p>
             <md-form-field>

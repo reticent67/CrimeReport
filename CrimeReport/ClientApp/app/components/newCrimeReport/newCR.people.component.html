@@ -6,81 +6,66 @@
         <div *ngFor="let person of formShell.controls.people.controls; let i=index" class="panel panel-default">
             <!-- Angular assigns array index as group name by default 0, 1, 2, ... -->
             <div [formGroupName]="i">
-                <md-expansion-panel [expanded]="true">
-                    <md-expansion-panel-header>
-                        <md-panel-title>
-                            Person {{i + 1}}
-                        </md-panel-title>
-                        <md-panel-description>
-                            <md-icon *ngIf="formShell.controls.people.controls.length > 1" (click)="removePerson(i)">delete</md-icon>
-                        </md-panel-description>
-                    </md-expansion-panel-header>
-         <!--Person Type-->
-                    <md-tab-group> 
-                        <md-tab label="Person Type">
-                            <div class="center">
-                                <md-grid-list cols="2" gutterSize="10px" >
-                                    <md-grid-tile class="person-type">Victim</md-grid-tile>
-                                    <md-grid-tile class="person-type">Suspect</md-grid-tile>
-                                    <md-grid-tile class="person-type">Witness</md-grid-tile>
-                                    <md-grid-tile class="person-type">Arrestee</md-grid-tile>
-                                    <md-grid-tile class="person-type">Parent</md-grid-tile>
-                                    <md-grid-tile class="person-type">Person Reporting</md-grid-tile>
-                                </md-grid-list>
-                            </div>
-                          
-                        </md-tab>
-        <!--Entry Method-->
-                        <md-tab label="Entry Method">Entry Method</md-tab>
-        <!--Manual Entry-->
-                        <md-tab label="Manual Entry">
+                <md-accordion>
+                    <md-expansion-panel [expanded]="step === 0" (opened)="setStep(0)">
+                        <md-expansion-panel-header>
+                            <md-panel-title>
+                                Person {{i + 1}}
+                            </md-panel-title>
+                            <md-panel-description>
+                                <md-icon class="pull-right" *ngIf="formShell.controls.people.controls.length > 1" (click)="removePerson(i)">delete</md-icon>
+                            </md-panel-description>
+                        </md-expansion-panel-header>
+                        <md-form-field>
+                            <input mdInput placeholder="Last Name" formControlName="lastName">
+                        </md-form-field>
+                        <md-form-field>
+                            <input mdInput placeholder="First Name" formControlName="firstName">
+                        </md-form-field>
+                        <p>
                             <md-form-field>
-                                <input mdInput placeholder="Last Name" formControlName="lastName">
+                                <input mdInput placeholder="Middle Name" formControlName="middleName">
                             </md-form-field>
-                            <md-form-field>
-                                <input mdInput placeholder="First Name" formControlName="firstName">
-                            </md-form-field>
-                            <p>
-                                <md-form-field>
-                                    <input mdInput placeholder="Middle Name" formControlName="middleName">
-                                </md-form-field>
-                            </p>
-                            <!-- Begin Address Array -->
-                            <div class="panel">
-                                <div formArrayName="addresses">
-                                    <div *ngFor="let address of person.controls.addresses.controls; let j=index" class="panel panel-primary">
-                                        <div class="panel-heading">
-                                            <span>Address {{j + 1}}</span>
-                                            <md-icon class="pull-right" *ngIf="person.controls.addresses.controls.length > 1" (click)="removeAddress(person, j)">delete</md-icon>
-                                        </div>
-                                        <div class="panel-body" [formGroupName]="j">
-                                            <div class="col-xs-12">
-                                                <md-form-field>
-                                                    <input mdInput placeholder="Address" formControlName="street">
-                                                </md-form-field>
-                                            </div>
+                        </p>
+
+                        <div class="panel">
+                            <div formArrayName="addresses">
+                                <div *ngFor="let address of person.controls.addresses.controls; let j=index" class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <span>Address {{j + 1}}</span>
+                                        <md-icon class="pull-right" *ngIf="person.controls.addresses.controls.length > 1" (click)="removeAddress(person, j)">delete</md-icon>
+                                    </div>
+                                    <div class="panel-body" [formGroupName]="j">
+                                        <div class="col-xs-12">
+                                            <md-form-field>
+                                                <input mdInput placeholder="Address" formControlName="street">
+                                            </md-form-field>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div>
-                                <button (click)="addAddress(person)" class="btn btn-primary">
-                                    Add another Address +
-                                </button>
-                            </div>
-                        </md-tab>
-                    </md-tab-group>
-                </md-expansion-panel>
+                        </div>
+                        <div>
+                            <!-- Begin Address Array -->
+                            <button (click)="addAddress(person)" class="btn btn-primary">
+                                Add another Address +
+                            </button>
+                        </div>
+                    </md-expansion-panel>
+                </md-accordion>
             </div>
         </div>
     </div>
-    <p class="center">
-        <button md-raised-button color="primary" (click)="addPerson()">
-            <md-icon>person_add</md-icon>
-        </button>
-    </p>
-    <div class="text-center">
-        <button md-raised-button type="submit"><md-icon>navigate_before</md-icon>Back</button>
-        <button md-raised-button type="submit"> Next <md-icon>navigate_next</md-icon></button>
+
+    <!-- End People Array-->
+    <!-- Submit Button-->
+    <div class="row">
+        <div class="center">
+            <button md-raised-button color="primary" (click)="addPerson()">Add person<md-icon class="pull-right">person_add</md-icon></button>
+        </div>
+        <div class="form-group text-center">
+            <button md-raised-button type="submit"><md-icon>navigate_before</md-icon>Previous </button>
+            <button md-raised-button type="submit"> Next <md-icon>navigate_next</md-icon></button>
+        </div>
     </div>
 </form>
