@@ -32,11 +32,11 @@
                 <input mdInput placeholder="Location" formControlName="occurranceLoc">
             </md-form-field>
         </p>
-
-        <md-action-row>
+        <md-action-row> </md-action-row>
+        <md-card-actions>
             <div class="form-group text-center">
-                <button [routerLinkActive]="['link-active']" [routerLink]="['../newCR-people']" class="btn btn-info" type-="submit"> Next <span style="margin-left: 10px;" class="glyphicon glyphicon-arrow-right"></span></button>
+                <button md-raised-button [routerLinkActive]="['link-active']" [routerLink]="['../newCR-people']" type="submit"> Next <md-icon>navigate_next</md-icon></button>
             </div>
-        </md-action-row>
+        </md-card-actions>
     </form>
 </md-card>
