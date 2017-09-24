@@ -1,12 +1,13 @@
-<form [formGroup]="formShell" (ngSubmit)="save(formShell)">
+<md-card class="center">
+    <form [formGroup]="formShell" (ngSubmit)="save(formShell)">
 
-    <!-- Begin People Array -->
+        <!-- Begin People Array -->
 
-    <div formArrayName="people" class="center">
-        <div *ngFor="let person of formShell.controls.people.controls; let i=index" class="panel panel-default">
-            <!-- Angular assigns array index as group name by default 0, 1, 2, ... -->
-            <div [formGroupName]="i">
-                <md-accordion>
+        <div formArrayName="people">
+            <div *ngFor="let person of formShell.controls.people.controls; let i=index" class="panel panel-default">
+                <!-- Angular assigns array index as group name by default 0, 1, 2, ... -->
+                <div [formGroupName]="i">
+
                     <md-expansion-panel [expanded]="step === 0" (opened)="setStep(0)">
                         <md-expansion-panel-header>
                             <md-panel-title>
@@ -16,18 +17,23 @@
                                 <md-icon class="pull-right" *ngIf="formShell.controls.people.controls.length > 1" (click)="removePerson(i)">delete</md-icon>
                             </md-panel-description>
                         </md-expansion-panel-header>
-                        <md-form-field>
-                            <input mdInput placeholder="Last Name" formControlName="lastName">
-                        </md-form-field>
-                        <md-form-field>
-                            <input mdInput placeholder="First Name" formControlName="firstName">
-                        </md-form-field>
-                        <p>
-                            <md-form-field>
-                                <input mdInput placeholder="Middle Name" formControlName="middleName">
-                            </md-form-field>
-                        </p>
-
+                        <ul>
+                            <li>
+                                <md-form-field>
+                                    <input mdInput placeholder="Last Name" formControlName="lastName">
+                                </md-form-field>
+                            </li>
+                            <li>
+                                <md-form-field>
+                                    <input mdInput placeholder="First Name" formControlName="firstName">
+                                </md-form-field>
+                            </li>
+                            <li>
+                                <md-form-field>
+                                    <input mdInput placeholder="Middle Name" formControlName="middleName">
+                                </md-form-field>
+                            </li>
+                        </ul>
                         <div class="panel">
                             <div formArrayName="addresses">
                                 <div *ngFor="let address of person.controls.addresses.controls; let j=index" class="panel panel-primary">
@@ -37,7 +43,7 @@
                                     </div>
                                     <div class="panel-body" [formGroupName]="j">
                                         <div class="col-xs-12">
-                                            <md-form-field>
+                                            <md-form-field class="col-xs-12">
                                                 <input mdInput placeholder="Address" formControlName="street">
                                             </md-form-field>
                                         </div>
@@ -46,26 +52,29 @@
                             </div>
                         </div>
                         <div>
-                            <!-- Begin Address Array -->
+
                             <button (click)="addAddress(person)" class="btn btn-primary">
                                 Add another Address +
                             </button>
                         </div>
                     </md-expansion-panel>
-                </md-accordion>
+
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- End People Array-->
-    <!-- Submit Button-->
-    <div class="row">
-        <div class="center">
-            <button md-raised-button color="primary" (click)="addPerson()">Add person<md-icon class="pull-right">person_add</md-icon></button>
+        <!-- End People Array-->
+        <!-- Submit Button-->
+        <div class="row">
+            <div>
+                <button md-raised-button color="primary" (click)="addPerson()">Add person<md-icon class="pull-right">person_add</md-icon></button>
+            </div>
+            <md-card-actions>
+                <div class="form-group text-center">
+                    <button md-raised-button type="submit"><md-icon>navigate_before</md-icon>Previous </button>
+                    <button md-raised-button type="submit"> Next <md-icon>navigate_next</md-icon></button>
+                </div>
+            </md-card-actions>
         </div>
-        <div class="form-group text-center">
-            <button md-raised-button type="submit"><md-icon>navigate_before</md-icon>Previous </button>
-            <button md-raised-button type="submit"> Next <md-icon>navigate_next</md-icon></button>
-        </div>
-    </div>
-</form>
+    </form>
+</md-card>
