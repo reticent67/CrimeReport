@@ -1,4 +1,8 @@
-﻿.card-wrap {
+﻿md-grid-tile {
+    background: lightblue;
+}
+
+.card-wrap {
     height: 10vh;
     display: flex;
     margin-top: 5%;
@@ -8,6 +12,19 @@
 
 .app-title {
     font-size: 24px;
+}
+
+.person-entry {
+    width: 100%;
+}
+
+.entry-method {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.entry-method-button {
+    margin: 5px;
 }
 
 
@@ -33,9 +50,9 @@ a {
     /* Remove the default scrollbar for WebKit implementations */
 }
 
-    .menu-wrap::-webkit-scrollbar {
-        display: none;
-    }
+.menu-wrap::-webkit-scrollbar {
+    display: none;
+}
 
 .app-menu {
     list-style: none;
@@ -114,17 +131,13 @@ a {
     .body-content {
         padding-top: 0;
     }
-
     .app-title {
-       font-size: 16px;
+        font-size: 16px;
     }
-
-
-/*Progress Bar*/
+    /*Progress Bar*/
     .app-menu {
         padding-left: 0;
     }
-
     .menu-item div {
         display: none;
         float: none;
