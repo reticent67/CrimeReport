@@ -14,7 +14,8 @@ const treeShakableModules = [
     '@angular/router',
     'zone.js',
     '@angular/material',
-    '@angular/material/prebuilt-themes/indigo-pink.css'
+    '@angular/material/prebuilt-themes/indigo-pink.css',
+    'hammerjs'
 ];
 const nonTreeShakableModules = [
     'bootstrap',
