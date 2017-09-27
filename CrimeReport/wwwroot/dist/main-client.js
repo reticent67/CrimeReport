@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "1b2ec277d3e17a733ba8"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "851b4cfbe59ffad35db9"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -711,13 +711,13 @@
 /* 0 */
 /***/ (function(module, exports) {
 
-module.exports = vendor_47714f496adf0070c3cd;
+module.exports = vendor_fc4742b15f882a6334e8;
 
 /***/ }),
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(0))(1);
+module.exports = (__webpack_require__(0))(0);
 
 /***/ }),
 /* 2 */
@@ -916,7 +916,7 @@ function toComment(sourceMap) {
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(0))(33);
+module.exports = (__webpack_require__(0))(17);
 
 /***/ }),
 /* 6 */
@@ -1470,19 +1470,19 @@ module.exports = Html5Entities;
 /* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(0))(31);
+module.exports = (__webpack_require__(0))(1);
 
 /***/ }),
 /* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(0))(4);
+module.exports = (__webpack_require__(0))(10);
 
 /***/ }),
 /* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(0))(9);
+module.exports = (__webpack_require__(0))(13);
 
 /***/ }),
 /* 16 */
@@ -1492,12 +1492,12 @@ module.exports = (__webpack_require__(0))(9);
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_reflect_metadata__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_reflect_metadata___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_reflect_metadata__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_zone_js__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_zone_js__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_zone_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_zone_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bootstrap__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bootstrap__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bootstrap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_bootstrap__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser_dynamic__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser_dynamic__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_app_module_browser__ = __webpack_require__(23);
 
 
@@ -1788,7 +1788,7 @@ if (module) {
 /* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(0))(67);
+module.exports = (__webpack_require__(0))(78);
 
 /***/ }),
 /* 19 */
@@ -1805,8 +1805,8 @@ module.exports = (__webpack_require__(0))(67);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return WebAnimationsDriver; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return supportsWebAnimations; });
 /* unused harmony export ɵWebAnimationsPlayer */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_animations__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_animations__ = __webpack_require__(15);
 
 /**
  * @license Angular v4.2.5
@@ -6766,10 +6766,10 @@ function supportsWebAnimations() {
 /* unused harmony export ɵd */
 /* unused harmony export ɵe */
 /* unused harmony export ɵc */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_animations__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_animations__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_animations_browser__ = __webpack_require__(19);
 
 /**
@@ -7685,7 +7685,7 @@ module.exports = function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* unused harmony export getBaseUrl */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_module_shared__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_app_app_component__ = __webpack_require__(6);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -7728,9 +7728,9 @@ function getBaseUrl() {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModuleShared; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser_animations__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_module__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_routes__ = __webpack_require__(25);
@@ -7795,7 +7795,7 @@ var AppModuleShared = (function () {
 "use strict";
 /* unused harmony export routes */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppRoutes; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_mainmenu_mainmenu_component__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_newCrimeReport_newCR_start_component__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_newCrimeReport_newCR_details_component__ = __webpack_require__(8);
@@ -7856,7 +7856,7 @@ var NewCRProgBarComponent = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MaterialModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__(54);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -7877,7 +7877,6 @@ var MaterialModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdCardModule"],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdCheckboxModule"],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdChipsModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdCoreModule"],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdDatepickerModule"],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdDialogModule"],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdExpansionModule"],
@@ -7910,7 +7909,6 @@ var MaterialModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdCardModule"],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdCheckboxModule"],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdChipsModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdCoreModule"],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdDatepickerModule"],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdDialogModule"],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdExpansionModule"],
@@ -7952,7 +7950,7 @@ exports = module.exports = __webpack_require__(4)(undefined);
 
 
 // module
-exports.push([module.i, "@media (max-width: 767px) {\n    /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */\n    .body-content {\n        padding-top: 50px;\n    }\n}\n", ""]);
+exports.push([module.i, "@media (max-width: 767px) {\r\n    /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */\r\n    .body-content {\r\n        padding-top: 50px;\r\n    }\r\n}\r\n", ""]);
 
 // exports
 
@@ -7966,7 +7964,7 @@ exports = module.exports = __webpack_require__(4)(undefined);
 
 
 // module
-exports.push([module.i, ".menu-tile {\n    border-radius: 3px;\n}\n\n.menu-wrap {\n    height: 95vh;\n    display: flex;\n    margin-top: 10%;\n    justify-content: center;\n    align-items: center;\n}\n\n@media (max-width: 900px) {\n    .menu-wrap {\n        height: 50vh;\n    }\n}", ""]);
+exports.push([module.i, ".menu-tile {\r\n    border-radius: 3px;\r\n}\r\n\r\n.menu-wrap {\r\n    height: 95vh;\r\n    display: flex;\r\n    margin-top: 10%;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n@media (max-width: 900px) {\r\n    .menu-wrap {\r\n        height: 50vh;\r\n    }\r\n}", ""]);
 
 // exports
 
@@ -7980,7 +7978,7 @@ exports = module.exports = __webpack_require__(4)(undefined);
 
 
 // module
-exports.push([module.i, "md-grid-tile {\n    background: lightblue;\n}\n\n.card-wrap {\n    height: 10vh;\n    display: flex;\n    margin-top: 5%;\n    justify-content: center;\n    align-items: center;\n}\n\n.app-title {\n    font-size: 24px;\n}\n\n.person-entry {\n    width: 100%;\n}\n\n.entry-method {\n    display: inline-flex;\n    flex-direction: column;\n}\n\n.entry-method-button {\n    margin: 5px;\n}\n\n\n/*Progress Bar*/\n\na {\n    text-decoration: none;\n}\n\n.menu-wrap {\n    position: relative;\n    margin-bottom: 6px;\n    margin-top: 10px;\n    max-height: 96px;\n    overflow-x: auto;\n    overflow-y: hidden;\n    /* Make an auto-hiding scroller for the 3 people using a IE */\n    -ms-overflow-style: -ms-autohiding-scrollbar;\n    /* For WebKit implementations, provide inertia scrolling */\n    -webkit-overflow-scrolling: touch;\n    /* We don't want internal inline elements to wrap */\n    white-space: nowrap;\n    /* Remove the default scrollbar for WebKit implementations */\n}\n\n.menu-wrap::-webkit-scrollbar {\n    display: none;\n}\n\n.app-menu {\n    list-style: none;\n    width: 100%;\n    margin: 0;\n    margin-bottom: 20px;\n    padding: 0;\n    padding-left: 8px;\n}\n\n.menu-item {\n    font-size: 16px;\n    color: #ffffff;\n    background: #283d50;\n    height: 60px;\n    line-height: 60px;\n    padding: 0 45px;\n    border-radius: 3px;\n    font-family: sans-serif;\n    position: relative;\n    margin-right: 10px;\n    display: inline-block;\n}\n\n.item-number {\n    position: absolute;\n    left: 2px;\n    top: 0;\n    font-size: 96px;\n    font-weight: 700;\n    overflow: hidden;\n    display: block;\n    color: white;\n}\n\n.menu-text {\n    padding-left: 36px;\n    color: white;\n    text-align: center;\n}\n\n.menu-item:hover {\n    background: #0F7F8C;\n}\n\n.link-active {\n    margin-top: 6px;\n    background: #0F7F8C;\n    align-self: center;\n}\n\n.link-active::after {\n    content: \"\";\n    width: 5px;\n    height: 5px;\n    background: transparent;\n    -webkit-transform: rotate(45deg);\n    -moz-transform: rotate(45deg);\n    -o-transform: rotate(45deg);\n    -ms-transform: rotate(45deg);\n    transform: rotate(45deg);\n    position: absolute;\n    bottom: -10px;\n    left: 50%;\n    margin-left: -12px;\n    border: 12px solid black;\n    border-top-color: black;\n    border-right-color: black;\n    border-bottom-color: black;\n    border-left-color: black;\n    border-color: transparent #0F7F8C #0F7F8C transparent;\n    z-index: -1;\n}\n\n@media only screen and (max-width: 900px) {\n    .body-content {\n        padding-top: 0;\n    }\n    .app-title {\n        font-size: 16px;\n    }\n    /*Progress Bar*/\n    .app-menu {\n        padding-left: 0;\n    }\n    .menu-item div {\n        display: none;\n        float: none;\n        position: fixed;\n    }\n}", ""]);
+exports.push([module.i, "md-grid-tile {\r\n    background: lightblue;\r\n}\r\n\r\n.card-wrap {\r\n    height: 10vh;\r\n    display: flex;\r\n    margin-top: 5%;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.app-title {\r\n    font-size: 24px;\r\n}\r\n\r\n.person-entry {\r\n    width: 100%;\r\n}\r\n\r\n.entry-method {\r\n    display: inline-flex;\r\n    flex-direction: column;\r\n}\r\n\r\n.entry-method-button {\r\n    margin: 5px;\r\n}\r\n\r\n\r\n/*Progress Bar*/\r\n\r\na {\r\n    text-decoration: none;\r\n}\r\n\r\n.menu-wrap {\r\n    position: relative;\r\n    margin-bottom: 6px;\r\n    margin-top: 10px;\r\n    max-height: 96px;\r\n    overflow-x: auto;\r\n    overflow-y: hidden;\r\n    /* Make an auto-hiding scroller for the 3 people using a IE */\r\n    -ms-overflow-style: -ms-autohiding-scrollbar;\r\n    /* For WebKit implementations, provide inertia scrolling */\r\n    -webkit-overflow-scrolling: touch;\r\n    /* We don't want internal inline elements to wrap */\r\n    white-space: nowrap;\r\n    /* Remove the default scrollbar for WebKit implementations */\r\n}\r\n\r\n.menu-wrap::-webkit-scrollbar {\r\n    display: none;\r\n}\r\n\r\n.app-menu {\r\n    list-style: none;\r\n    width: 100%;\r\n    margin: 0;\r\n    margin-bottom: 20px;\r\n    padding: 0;\r\n    padding-left: 8px;\r\n}\r\n\r\n.menu-item {\r\n    font-size: 16px;\r\n    color: #ffffff;\r\n    background: #283d50;\r\n    height: 60px;\r\n    line-height: 60px;\r\n    padding: 0 45px;\r\n    border-radius: 3px;\r\n    font-family: sans-serif;\r\n    position: relative;\r\n    margin-right: 10px;\r\n    display: inline-block;\r\n}\r\n\r\n.item-number {\r\n    position: absolute;\r\n    left: 2px;\r\n    top: 0;\r\n    font-size: 96px;\r\n    font-weight: 700;\r\n    overflow: hidden;\r\n    display: block;\r\n    color: white;\r\n}\r\n\r\n.menu-text {\r\n    padding-left: 36px;\r\n    color: white;\r\n    text-align: center;\r\n}\r\n\r\n.menu-item:hover {\r\n    background: #0F7F8C;\r\n}\r\n\r\n.link-active {\r\n    margin-top: 6px;\r\n    background: #0F7F8C;\r\n    align-self: center;\r\n}\r\n\r\n.link-active::after {\r\n    content: \"\";\r\n    width: 5px;\r\n    height: 5px;\r\n    background: transparent;\r\n    -webkit-transform: rotate(45deg);\r\n    -moz-transform: rotate(45deg);\r\n    -o-transform: rotate(45deg);\r\n    -ms-transform: rotate(45deg);\r\n    transform: rotate(45deg);\r\n    position: absolute;\r\n    bottom: -10px;\r\n    left: 50%;\r\n    margin-left: -12px;\r\n    border: 12px solid black;\r\n    border-top-color: black;\r\n    border-right-color: black;\r\n    border-bottom-color: black;\r\n    border-left-color: black;\r\n    border-color: transparent #0F7F8C #0F7F8C transparent;\r\n    z-index: -1;\r\n}\r\n\r\n@media only screen and (max-width: 900px) {\r\n    .body-content {\r\n        padding-top: 0;\r\n    }\r\n    .app-title {\r\n        font-size: 16px;\r\n    }\r\n    /*Progress Bar*/\r\n    .app-menu {\r\n        padding-left: 0;\r\n    }\r\n    .menu-item div {\r\n        display: none;\r\n        float: none;\r\n        position: fixed;\r\n    }\r\n}", ""]);
 
 // exports
 
@@ -8315,37 +8313,37 @@ module.exports = XmlEntities;
 /* 34 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid\">\n    <div class=\"row text-center\">\n        <h1>Add a new Nav Menu</h1>\n    </div>\n    <div class=\"row\">\n       <div class=\"col-sm-12\">\n            <router-outlet></router-outlet>\n        </div>\n    </div>\n</div>";
+module.exports = "<div class=\"container-fluid\">\r\n    <div class=\"row text-center\">\r\n        <h1>Add a new Nav Menu</h1>\r\n    </div>\r\n    <div class=\"row\">\r\n       <div class=\"col-sm-12\">\r\n            <router-outlet></router-outlet>\r\n        </div>\r\n    </div>\r\n</div>";
 
 /***/ }),
 /* 35 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"menu-wrap\" flex=\"50\">\n    <md-grid-list class=\"center\" cols=\"3\" rows=\"2\" gutterSize=\"5px\">\n        <md-grid-tile class=\"menu-tile\" [routerLink]=\"['/newCR-start']\">\n            <span class='glyphicon glyphicon-education'></span>New Crime Report\n        </md-grid-tile>\n        <md-grid-tile class=\"menu-tile\">2</md-grid-tile>\n        <md-grid-tile class=\"menu-tile\">3</md-grid-tile>\n        <md-grid-tile class=\"menu-tile\">4</md-grid-tile>\n        <md-grid-tile class=\"menu-tile\">5</md-grid-tile>\n        <md-grid-tile class=\"menu-tile\">6</md-grid-tile>\n    </md-grid-list>\n</div>";
+module.exports = "<div class=\"menu-wrap\" flex=\"50\">\r\n    <md-grid-list class=\"center\" cols=\"3\" rows=\"2\" gutterSize=\"5px\">\r\n        <md-grid-tile class=\"menu-tile\" [routerLink]=\"['/newCR-start']\">\r\n            <span class='glyphicon glyphicon-education'></span>New Crime Report\r\n        </md-grid-tile>\r\n        <md-grid-tile class=\"menu-tile\">2</md-grid-tile>\r\n        <md-grid-tile class=\"menu-tile\">3</md-grid-tile>\r\n        <md-grid-tile class=\"menu-tile\">4</md-grid-tile>\r\n        <md-grid-tile class=\"menu-tile\">5</md-grid-tile>\r\n        <md-grid-tile class=\"menu-tile\">6</md-grid-tile>\r\n    </md-grid-list>\r\n</div>";
 
 /***/ }),
 /* 36 */
 /***/ (function(module, exports) {
 
-module.exports = "<md-card class=\"center\">\n    <form [formGroup]=\"detailsForm\" (ngSubmit)=\"save(detailsForm)\">\n        <div class=\"tab-pane fade in active\">\n            <h4 class=\"text-center\">{{title}}</h4>\n        </div>\n        <md-form-field>\n            <input mdInput placeholder=\"Report Title\" formControlName=\"reportTitle\">\n        </md-form-field>\n        <p>\n            <md-form-field>\n                <input mdInput placeholder=\"Incident Number\" formControlName=\"incidentNum\">\n            </md-form-field>\n        </p>\n        <md-form-field class=\"col-md-4\">\n            <input mdInput [mdDatepicker]=\"occurranceStart\" placeholder=\"Start Date\">\n            <md-datepicker-toggle mdSuffix [for]=\"occurranceStart\"></md-datepicker-toggle>\n            <md-datepicker touchUi=\"true\" #occurranceStart></md-datepicker>\n        </md-form-field>\n        <md-form-field class=\"col-md-4\">\n            <input mdInput placeholder=\"Start Time\" type=\"time\">\n        </md-form-field>\n        <p>\n            <md-form-field>\n                <input mdInput [mdDatepicker]=\"occurranceEnd\" placeholder=\"End Date\">\n                <md-datepicker-toggle mdSuffix [for]=\"occurranceEnd\"></md-datepicker-toggle>\n                <md-datepicker touchUi=\"true\" #occurranceEnd></md-datepicker>\n            </md-form-field>\n        </p>\n\n        <p>\n            <md-form-field>\n                <input mdInput placeholder=\"Location\" formControlName=\"occurranceLoc\">\n            </md-form-field>\n        </p>\n        <md-action-row> </md-action-row>\n        <md-card-actions>\n            <div class=\"form-group text-center\">\n                <button md-raised-button [routerLinkActive]=\"['link-active']\" [routerLink]=\"['../newCR-people']\" type=\"submit\"> Next <md-icon>navigate_next</md-icon></button>\n            </div>\n        </md-card-actions>\n    </form>\n</md-card>";
+module.exports = "<md-card class=\"center\">\r\n    <form [formGroup]=\"detailsForm\" (ngSubmit)=\"save(detailsForm)\">\r\n        <div class=\"tab-pane fade in active\">\r\n            <h4 class=\"text-center\">{{title}}</h4>\r\n        </div>\r\n        <md-form-field>\r\n            <input mdInput placeholder=\"Report Title\" formControlName=\"reportTitle\">\r\n        </md-form-field>\r\n        <p>\r\n            <md-form-field>\r\n                <input mdInput placeholder=\"Incident Number\" formControlName=\"incidentNum\">\r\n            </md-form-field>\r\n        </p>\r\n        <md-form-field class=\"col-md-4\">\r\n            <input mdInput [mdDatepicker]=\"occurranceStart\" placeholder=\"Start Date\">\r\n            <md-datepicker-toggle mdSuffix [for]=\"occurranceStart\"></md-datepicker-toggle>\r\n            <md-datepicker touchUi=\"true\" #occurranceStart></md-datepicker>\r\n        </md-form-field>\r\n        <md-form-field class=\"col-md-4\">\r\n            <input mdInput placeholder=\"Start Time\" type=\"time\">\r\n        </md-form-field>\r\n        <p>\r\n            <md-form-field>\r\n                <input mdInput [mdDatepicker]=\"occurranceEnd\" placeholder=\"End Date\">\r\n                <md-datepicker-toggle mdSuffix [for]=\"occurranceEnd\"></md-datepicker-toggle>\r\n                <md-datepicker touchUi=\"true\" #occurranceEnd></md-datepicker>\r\n            </md-form-field>\r\n        </p>\r\n\r\n        <p>\r\n            <md-form-field>\r\n                <input mdInput placeholder=\"Location\" formControlName=\"occurranceLoc\">\r\n            </md-form-field>\r\n        </p>\r\n        <md-action-row> </md-action-row>\r\n        <md-card-actions>\r\n            <div class=\"form-group text-center\">\r\n                <button md-raised-button [routerLinkActive]=\"['link-active']\" [routerLink]=\"['../newCR-people']\" type=\"submit\"> Next <md-icon>navigate_next</md-icon></button>\r\n            </div>\r\n        </md-card-actions>\r\n    </form>\r\n</md-card>";
 
 /***/ }),
 /* 37 */
 /***/ (function(module, exports) {
 
-module.exports = "<md-card class=\"center\">\n    <form [formGroup]=\"formShell\" (ngSubmit)=\"save(formShell)\">\n        <!-- Begin People Array -->\n        <div formArrayName=\"people\">\n            <div *ngFor=\"let person of formShell.controls.people.controls; let i=index\" class=\"panel panel-default\">\n                <!-- Angular assigns array index as group name by default 0, 1, 2, ... -->\n                <div [formGroupName]=\"i\">\n                    <md-expansion-panel [expanded]=\"true\">\n                        <md-expansion-panel-header>\n                            <md-panel-title>\n                                Person {{i + 1}}\n                            </md-panel-title>\n                            <md-panel-description>\n                                <md-icon class=\"pull-right\" *ngIf=\"formShell.controls.people.controls.length > 1\" (click)=\"removePerson(i)\">delete</md-icon>\n                            </md-panel-description>\n                        </md-expansion-panel-header>\n                        <md-tab-group>\n                            <md-tab>\n                                <md-grid-list class=\"center\" cols=\"2\" rowHeight='60px' gutterSize='5px'>\n                                    <md-grid-tile>Victim</md-grid-tile>\n                                    <md-grid-tile>Suspect</md-grid-tile>\n                                    <md-grid-tile>Witness</md-grid-tile>\n                                    <md-grid-tile>Other</md-grid-tile>\n                                </md-grid-list>\n                            </md-tab>\n                            <md-tab label=\"Entry Method\">\n                                <md-radio-group class=\"entry-method\">\n                                    <md-radio-button class=\"entry-method-button\">\n                                        Name Search\n                                    </md-radio-button>\n                                    <md-radio-button class=\"entry-method-button\">\n                                        Scan Id\n                                    </md-radio-button>\n                                    <md-radio-button class=\"entry-method-button\">\n                                        Manual Entry\n                                    </md-radio-button>\n                                </md-radio-group>\n                            </md-tab>\n                            <md-tab>\n                                Name/Address\n                                <button (click)=\"addAddress(person)\" class=\"btn btn-primary\">\n                                        Add another Address +\n                                    </button>\n                            </md-tab>\n                            <md-tab>\n                                Descriptors\n                            </md-tab>\n                        </md-tab-group>\n\n                    </md-expansion-panel>\n                </div>\n            </div>\n        </div>\n\n        <!-- End People Array-->\n        <!-- Submit Button-->\n        <div>\n            <div>\n                <button md-raised-button color=\"primary\" (click)=\"addPerson()\">Add person<md-icon class=\"pull-right\">person_add</md-icon></button>\n            </div>\n        </div>\n        <md-action-row> </md-action-row>\n        <md-card-actions>\n            <div class=\"form-group text-center\">\n                <button md-raised-button type=\"submit\"><md-icon>navigate_before</md-icon>Previous </button>\n                <button md-raised-button type=\"submit\"> Next <md-icon>navigate_next</md-icon></button>\n            </div>\n        </md-card-actions>\n\n    </form>\n</md-card>";
+module.exports = "<md-card class=\"center\">\r\n    <form [formGroup]=\"formShell\" (ngSubmit)=\"save(formShell)\">\r\n        <!-- Begin People Array -->\r\n        <div formArrayName=\"people\">\r\n            <div *ngFor=\"let person of formShell.controls.people.controls; let i=index\" class=\"panel panel-default\">\r\n                <!-- Angular assigns array index as group name by default 0, 1, 2, ... -->\r\n                <div [formGroupName]=\"i\">\r\n                    <md-expansion-panel [expanded]=\"true\">\r\n                        <md-expansion-panel-header>\r\n                            <md-panel-title>\r\n                                Person {{i + 1}}\r\n                            </md-panel-title>\r\n                            <md-panel-description>\r\n                                <md-icon class=\"pull-right\" *ngIf=\"formShell.controls.people.controls.length > 1\" (click)=\"removePerson(i)\">delete</md-icon>\r\n                            </md-panel-description>\r\n                        </md-expansion-panel-header>\r\n                        <md-tab-group>\r\n                            <md-tab>\r\n                                <md-grid-list class=\"center\" cols=\"2\" rowHeight='60px' gutterSize='5px'>\r\n                                    <md-grid-tile>Victim</md-grid-tile>\r\n                                    <md-grid-tile>Suspect</md-grid-tile>\r\n                                    <md-grid-tile>Witness</md-grid-tile>\r\n                                    <md-grid-tile>Other</md-grid-tile>\r\n                                </md-grid-list>\r\n                            </md-tab>\r\n                            <md-tab label=\"Entry Method\">\r\n                                <md-radio-group class=\"entry-method\">\r\n                                    <md-radio-button class=\"entry-method-button\">\r\n                                        Name Search\r\n                                    </md-radio-button>\r\n                                    <md-radio-button class=\"entry-method-button\">\r\n                                        Scan Id\r\n                                    </md-radio-button>\r\n                                    <md-radio-button class=\"entry-method-button\">\r\n                                        Manual Entry\r\n                                    </md-radio-button>\r\n                                </md-radio-group>\r\n                            </md-tab>\r\n                            <md-tab>\r\n                                Name/Address\r\n                                <button (click)=\"addAddress(person)\" class=\"btn btn-primary\">\r\n                                        Add another Address +\r\n                                    </button>\r\n                            </md-tab>\r\n                            <md-tab>\r\n                                Descriptors\r\n                            </md-tab>\r\n                        </md-tab-group>\r\n\r\n                    </md-expansion-panel>\r\n                </div>\r\n            </div>\r\n        </div>\r\n\r\n        <!-- End People Array-->\r\n        <!-- Submit Button-->\r\n        <div>\r\n            <div>\r\n                <button md-raised-button color=\"primary\" (click)=\"addPerson()\">Add person<md-icon class=\"pull-right\">person_add</md-icon></button>\r\n            </div>\r\n        </div>\r\n        <md-action-row> </md-action-row>\r\n        <md-card-actions>\r\n            <div class=\"form-group text-center\">\r\n                <button md-raised-button type=\"submit\"><md-icon>navigate_before</md-icon>Previous </button>\r\n                <button md-raised-button type=\"submit\"> Next <md-icon>navigate_next</md-icon></button>\r\n            </div>\r\n        </md-card-actions>\r\n\r\n    </form>\r\n</md-card>";
 
 /***/ }),
 /* 38 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"menu-wrap center\" flex=\"50\">\n    <nav class=\"app-menu\">\n        <div class=\"menu-item\" [routerLinkActive]=\"['link-active']\">\n            <a [routerLink]=\"['./newCR-details']\">\n                <span class=\"item-number\">1</span>\n                <div class=\"menu-text\">Details</div>\n            </a>\n        </div>\n\n        <div class=\"menu-item\" [routerLinkActive]=\"['link-active']\">\n            <a [routerLink]=\"['./newCR-people']\">\n                <span class=\"item-number\">2</span>\n                <div class=\"menu-text\">People</div>\n            </a>\n        </div>\n        <div class=\"menu-item\">\n            <a>\n                <span class=\"item-number\">3</span>\n                <div class=\"menu-text\">Cars</div>\n            </a>\n        </div>\n        <div class=\"menu-item\">\n            <a>\n                <span class=\"item-number\">4</span>\n                <div class=\"menu-text\">Weapons</div>\n            </a>\n        </div>\n        <div class=\"menu-item\">\n            <a>\n                <span class=\"item-number\">5</span>\n                <div class=\"menu-text\">Summary</div>\n            </a>\n        </div>\n    </nav>\n</div>";
+module.exports = "<div class=\"menu-wrap center\" flex=\"50\">\r\n    <nav class=\"app-menu\">\r\n        <div class=\"menu-item\" [routerLinkActive]=\"['link-active']\">\r\n            <a [routerLink]=\"['./newCR-details']\">\r\n                <span class=\"item-number\">1</span>\r\n                <div class=\"menu-text\">Details</div>\r\n            </a>\r\n        </div>\r\n\r\n        <div class=\"menu-item\" [routerLinkActive]=\"['link-active']\">\r\n            <a [routerLink]=\"['./newCR-people']\">\r\n                <span class=\"item-number\">2</span>\r\n                <div class=\"menu-text\">People</div>\r\n            </a>\r\n        </div>\r\n        <div class=\"menu-item\">\r\n            <a>\r\n                <span class=\"item-number\">3</span>\r\n                <div class=\"menu-text\">Cars</div>\r\n            </a>\r\n        </div>\r\n        <div class=\"menu-item\">\r\n            <a>\r\n                <span class=\"item-number\">4</span>\r\n                <div class=\"menu-text\">Weapons</div>\r\n            </a>\r\n        </div>\r\n        <div class=\"menu-item\">\r\n            <a>\r\n                <span class=\"item-number\">5</span>\r\n                <div class=\"menu-text\">Summary</div>\r\n            </a>\r\n        </div>\r\n    </nav>\r\n</div>";
 
 /***/ }),
 /* 39 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n    <div class=\"row\">\n        <newCR-progBar></newCR-progBar>\n    </div>\n    <div class=\"row\">\n        <form id=\"msform\">\n            <router-outlet></router-outlet>\n        </form>\n    </div>\n    <div class=\"center\">\n        <pre> {{ reportFormData.value | json }}</pre>\n    </div>\n</div>";
+module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n        <newCR-progBar></newCR-progBar>\r\n    </div>\r\n    <div class=\"row\">\r\n        <form id=\"msform\">\r\n            <router-outlet></router-outlet>\r\n        </form>\r\n    </div>\r\n    <div class=\"center\">\r\n        <pre> {{ reportFormData.value | json }}</pre>\r\n    </div>\r\n</div>";
 
 /***/ }),
 /* 40 */
@@ -9670,7 +9668,7 @@ var Reflect;
             Function("return this;")());
 })(Reflect || (Reflect = {}));
 //# sourceMappingURL=Reflect.js.map
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(52), __webpack_require__(50)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(53), __webpack_require__(50)))
 
 /***/ }),
 /* 44 */
@@ -9968,55 +9966,55 @@ module.exports = function(module) {
 /* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(0))(13);
+module.exports = (__webpack_require__(0))(27);
 
 /***/ }),
 /* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(0))(34);
+module.exports = (__webpack_require__(0))(3);
 
 /***/ }),
 /* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(0))(40);
+module.exports = (__webpack_require__(0))(48);
 
 /***/ }),
 /* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(0))(61);
+module.exports = (__webpack_require__(0))(54);
 
 /***/ }),
 /* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(0))(62);
+module.exports = (__webpack_require__(0))(72);
 
 /***/ }),
 /* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(0))(63);
+module.exports = (__webpack_require__(0))(73);
 
 /***/ }),
 /* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(0))(64);
+module.exports = (__webpack_require__(0))(74);
 
 /***/ }),
 /* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(0))(70);
+module.exports = (__webpack_require__(0))(75);
 
 /***/ }),
 /* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(0))(8);
+module.exports = (__webpack_require__(0))(82);
 
 /***/ }),
 /* 59 */
