@@ -1,28 +1,35 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ReportService } from '../../services/ReportService';
 import { ReportPerson, PersonAddress } from '../../models/reportForm.model';
 import { Validators, FormGroup, FormArray, FormBuilder } from '@angular/forms';
 
 
 @Component({
-    selector: 'newCR-people',
+    selector:    'newCR-people',
     templateUrl: './newCR.people.component.html',
-    styleUrls: ['./newCR.css']
+    styleUrls:   ['./newCR.css']
+
 })
 
 export class NewCRPeopleComponent implements OnInit {
     title = 'Add the People Involved';
     formShell: FormGroup;
     index: number;
-    
-    constructor(private reportFormDataService: ReportService, private _fb: FormBuilder) { }
+
+
+
+    constructor(private reportFormDataService: ReportService, private _fb: FormBuilder) {
+
+    }
 
     ngOnInit() {
+
         this.formShell = this._fb.group({
             people: this._fb.array([
                 this.initPerson(),
             ])
         });
+
     }
 
     initPerson() {
@@ -55,12 +62,15 @@ export class NewCRPeopleComponent implements OnInit {
     addAddress(person: FormGroup) {
         const addressArray = <FormArray>person.controls['addresses'];
         addressArray.push(this.initAddress());
+
     }
 
     removeAddress(person: FormGroup, index: number) {
         const addressArray = <FormArray>person.controls['addresses'];
         addressArray.removeAt(index);
+
     }
+
 
     save(form: any) {
         var reportPersonList: ReportPerson[] = new Array();
@@ -81,6 +91,7 @@ export class NewCRPeopleComponent implements OnInit {
             reportPersonList.push(p);
         }
         this.reportFormDataService.setReportPeople(reportPersonList);
-    }
-}
 
+    }
+
+}

@@ -6,7 +6,7 @@ import {
     MdCardModule,
     MdCheckboxModule,
     MdChipsModule,
-    
+    MdCoreModule,
     MdDatepickerModule,
     MdDialogModule,
     MdExpansionModule,
@@ -31,18 +31,18 @@ import {
     MdTabsModule,
     MdToolbarModule,
     MdTooltipModule,
-  
-    } from '@angular/material';
+} from '@angular/material';
 
 @NgModule({
   imports: [
+    
       MdAutocompleteModule,
       MdButtonModule,
       MdButtonToggleModule,
       MdCardModule,
       MdCheckboxModule,
       MdChipsModule,
-      
+      MdCoreModule,
       MdDatepickerModule,
       MdDialogModule,
       MdExpansionModule,
@@ -67,8 +67,7 @@ import {
       MdTabsModule,
       MdToolbarModule,
       MdTooltipModule,
-      
-  ],
+    ],
   
   exports: [
       MdAutocompleteModule,
@@ -77,7 +76,7 @@ import {
       MdCardModule,
       MdCheckboxModule,
       MdChipsModule,
-      
+      MdCoreModule,
       MdDatepickerModule,
       MdDialogModule,
       MdExpansionModule,
@@ -102,8 +101,6 @@ import {
       MdTabsModule,
       MdToolbarModule,
       MdTooltipModule,
-     
-     
     ],
 })
 export class MaterialModule { }
