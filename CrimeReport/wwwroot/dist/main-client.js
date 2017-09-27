@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "a30e40f8574feb269791"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "dba41caf41b6aedc60ed"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -738,6 +738,106 @@ module.exports = (__webpack_require__(0))(0);
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewCRPeopleComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_ReportService__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_reportForm_model__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(6);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var NewCRPeopleComponent = (function () {
+    function NewCRPeopleComponent(reportFormDataService, _fb) {
+        this.reportFormDataService = reportFormDataService;
+        this._fb = _fb;
+        this.title = 'Add the People Involved';
+    }
+    NewCRPeopleComponent.prototype.ngOnInit = function () {
+        this.formShell = this._fb.group({
+            people: this._fb.array([
+                this.initPerson(),
+            ])
+        });
+    };
+    NewCRPeopleComponent.prototype.initPerson = function () {
+        return this._fb.group({
+            lastName: [''],
+            firstName: [''],
+            middleName: [''],
+            addresses: this._fb.array([
+                this.initAddress()
+            ])
+        });
+    };
+    NewCRPeopleComponent.prototype.addPerson = function () {
+        var personArray = this.formShell.controls['people'];
+        personArray.push(this.initPerson());
+    };
+    NewCRPeopleComponent.prototype.removePerson = function (index) {
+        var personArray = this.formShell.controls['people'];
+        personArray.removeAt(index);
+    };
+    NewCRPeopleComponent.prototype.initAddress = function () {
+        return this._fb.group({
+            street: ['']
+        });
+    };
+    NewCRPeopleComponent.prototype.addAddress = function (person) {
+        var addressArray = person.controls['addresses'];
+        addressArray.push(this.initAddress());
+    };
+    NewCRPeopleComponent.prototype.removeAddress = function (person, index) {
+        var addressArray = person.controls['addresses'];
+        addressArray.removeAt(index);
+    };
+    NewCRPeopleComponent.prototype.save = function (form) {
+        var reportPersonList = new Array();
+        var people = form.get('people');
+        console.log(people.value);
+        for (var i = 0; i < people.length; i++) {
+            var p = new __WEBPACK_IMPORTED_MODULE_2__models_reportForm_model__["a" /* ReportPerson */];
+            p.lastName = people.at(i).get('lastName').value;
+            p.firstName = people.at(i).get('firstName').value;
+            p.middleName = people.at(i).get('middleName').value;
+            var addresses = people.at(i).get('addresses');
+            for (var j = 0; j < addresses.length; j++) {
+                var a = new __WEBPACK_IMPORTED_MODULE_2__models_reportForm_model__["b" /* PersonAddress */];
+                a.street = addresses.at(j).get('street').value;
+                p.addresses.push(a);
+            }
+            ;
+            reportPersonList.push(p);
+        }
+        this.reportFormDataService.setReportPeople(reportPersonList);
+    };
+    NewCRPeopleComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'newCR-people',
+            template: __webpack_require__(37),
+            styles: [__webpack_require__(2)]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_ReportService__["a" /* ReportService */], __WEBPACK_IMPORTED_MODULE_3__angular_forms__["FormBuilder"]])
+    ], NewCRPeopleComponent);
+    return NewCRPeopleComponent;
+}());
+
+
+
+/***/ }),
+/* 4 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReportService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_reportForm_model__ = __webpack_require__(11);
@@ -831,7 +931,7 @@ var ReportService = (function () {
 
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports) {
 
 /*
@@ -913,13 +1013,13 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(0))(17);
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -948,7 +1048,7 @@ var AppComponent = (function () {
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -977,14 +1077,14 @@ var MainMenuComponent = (function () {
 
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewCRDetailsComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_ReportService__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_ReportService__ = __webpack_require__(4);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1035,150 +1135,13 @@ var NewCRDetailsComponent = (function () {
 
 
 /***/ }),
-/* 9 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewCRPeopleComponent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return TestDialogComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_ReportService__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_reportForm_model__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_material__ = __webpack_require__(54);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __param = (this && this.__param) || function (paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-};
-
-
-
-
-
-var NewCRPeopleComponent = (function () {
-    function NewCRPeopleComponent(reportFormDataService, _fb, dialog) {
-        this.reportFormDataService = reportFormDataService;
-        this._fb = _fb;
-        this.dialog = dialog;
-        this.title = 'Add the People Involved';
-    }
-    NewCRPeopleComponent.prototype.openDialog = function () {
-        var _this = this;
-        var dialogRef = this.dialog.open(TestDialogComponent, {
-            width: '250px',
-            data: { name: this.name, animal: this.animal }
-        });
-        dialogRef.afterClosed().subscribe(function (result) {
-            console.log('The dialog was closed');
-            _this.animal = result;
-        });
-    };
-    NewCRPeopleComponent.prototype.ngOnInit = function () {
-        this.formShell = this._fb.group({
-            people: this._fb.array([
-                this.initPerson(),
-            ])
-        });
-    };
-    NewCRPeopleComponent.prototype.initPerson = function () {
-        return this._fb.group({
-            lastName: [''],
-            firstName: [''],
-            middleName: [''],
-            addresses: this._fb.array([
-                this.initAddress()
-            ])
-        });
-    };
-    NewCRPeopleComponent.prototype.addPerson = function () {
-        var personArray = this.formShell.controls['people'];
-        personArray.push(this.initPerson());
-    };
-    NewCRPeopleComponent.prototype.removePerson = function (index) {
-        var personArray = this.formShell.controls['people'];
-        personArray.removeAt(index);
-    };
-    NewCRPeopleComponent.prototype.initAddress = function () {
-        return this._fb.group({
-            street: ['']
-        });
-    };
-    NewCRPeopleComponent.prototype.addAddress = function (person) {
-        var addressArray = person.controls['addresses'];
-        addressArray.push(this.initAddress());
-    };
-    NewCRPeopleComponent.prototype.removeAddress = function (person, index) {
-        var addressArray = person.controls['addresses'];
-        addressArray.removeAt(index);
-    };
-    NewCRPeopleComponent.prototype.save = function (form) {
-        var reportPersonList = new Array();
-        var people = form.get('people');
-        console.log(people.value);
-        for (var i = 0; i < people.length; i++) {
-            var p = new __WEBPACK_IMPORTED_MODULE_2__models_reportForm_model__["a" /* ReportPerson */];
-            p.lastName = people.at(i).get('lastName').value;
-            p.firstName = people.at(i).get('firstName').value;
-            p.middleName = people.at(i).get('middleName').value;
-            var addresses = people.at(i).get('addresses');
-            for (var j = 0; j < addresses.length; j++) {
-                var a = new __WEBPACK_IMPORTED_MODULE_2__models_reportForm_model__["b" /* PersonAddress */];
-                a.street = addresses.at(j).get('street').value;
-                p.addresses.push(a);
-            }
-            ;
-            reportPersonList.push(p);
-        }
-        this.reportFormDataService.setReportPeople(reportPersonList);
-    };
-    NewCRPeopleComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'newCR-people',
-            template: __webpack_require__(37),
-            styles: [__webpack_require__(2)]
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_ReportService__["a" /* ReportService */], __WEBPACK_IMPORTED_MODULE_3__angular_forms__["FormBuilder"], __WEBPACK_IMPORTED_MODULE_4__angular_material__["MdDialog"]])
-    ], NewCRPeopleComponent);
-    return NewCRPeopleComponent;
-}());
-
-var TestDialogComponent = (function () {
-    function TestDialogComponent(dialogRef, data) {
-        this.dialogRef = dialogRef;
-        this.data = data;
-    }
-    TestDialogComponent.prototype.onNoClick = function () {
-        this.dialogRef.close();
-    };
-    TestDialogComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'test-dialog',
-            template: 'Hi'
-        }),
-        __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_4__angular_material__["MD_DIALOG_DATA"])),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__angular_material__["MdDialogRef"], Object])
-    ], TestDialogComponent);
-    return TestDialogComponent;
-}());
-
-
-
-/***/ }),
 /* 10 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewCRStartComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_ReportService__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_ReportService__ = __webpack_require__(4);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -7724,7 +7687,7 @@ module.exports = function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_module_shared__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_app_app_component__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_app_app_component__ = __webpack_require__(7);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -7766,24 +7729,23 @@ function getBaseUrl() {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModuleShared; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser_animations__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_module__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_routes__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_app_app_component__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_mainmenu_mainmenu_component__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_app_app_component__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_mainmenu_mainmenu_component__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_newCrimeReport_newCR_start_component__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_newCrimeReport_newCR_progBar_component__ = __webpack_require__(26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_newCrimeReport_newCR_details_component__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_newCrimeReport_newCR_people_component__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_newCrimeReport_newCR_details_component__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_newCrimeReport_newCR_people_component__ = __webpack_require__(3);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
 
 
 
@@ -7809,7 +7771,6 @@ var AppModuleShared = (function () {
                 __WEBPACK_IMPORTED_MODULE_10__components_newCrimeReport_newCR_progBar_component__["a" /* NewCRProgBarComponent */],
                 __WEBPACK_IMPORTED_MODULE_11__components_newCrimeReport_newCR_details_component__["a" /* NewCRDetailsComponent */],
                 __WEBPACK_IMPORTED_MODULE_12__components_newCrimeReport_newCR_people_component__["a" /* NewCRPeopleComponent */],
-                __WEBPACK_IMPORTED_MODULE_12__components_newCrimeReport_newCR_people_component__["b" /* TestDialogComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
@@ -7835,10 +7796,10 @@ var AppModuleShared = (function () {
 /* unused harmony export routes */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppRoutes; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_mainmenu_mainmenu_component__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_mainmenu_mainmenu_component__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_newCrimeReport_newCR_start_component__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_newCrimeReport_newCR_details_component__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_newCrimeReport_newCR_people_component__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_newCrimeReport_newCR_details_component__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_newCrimeReport_newCR_people_component__ = __webpack_require__(3);
 
 
 
@@ -7984,7 +7945,7 @@ var MaterialModule = (function () {
 /* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(4)(undefined);
+exports = module.exports = __webpack_require__(5)(undefined);
 // imports
 
 
@@ -7998,7 +7959,7 @@ exports.push([module.i, "@media (max-width: 767px) {\r\n    /* On small screens,
 /* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(4)(undefined);
+exports = module.exports = __webpack_require__(5)(undefined);
 // imports
 
 
@@ -8012,7 +7973,7 @@ exports.push([module.i, "md-grid-tile {\r\n    background: lightblue;\r\n}\r\n\r
 /* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(4)(undefined);
+exports = module.exports = __webpack_require__(5)(undefined);
 // imports
 
 

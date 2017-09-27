@@ -12,7 +12,6 @@ import { NewCRStartComponent } from './components/newCrimeReport/newCR.start.com
 import { NewCRProgBarComponent } from './components/newCrimeReport/newCR.progBar.component';
 import { NewCRDetailsComponent } from './components/newCrimeReport/newCR.details.component';
 import { NewCRPeopleComponent } from './components/newCrimeReport/newCR.people.component';
-import { TestDialogComponent } from './components/newCrimeReport/newCR.people.component';
 
 
 
@@ -25,7 +24,7 @@ import { TestDialogComponent } from './components/newCrimeReport/newCR.people.co
         NewCRProgBarComponent,
         NewCRDetailsComponent,
         NewCRPeopleComponent,
-        TestDialogComponent
+        
         
     ],
     imports: [

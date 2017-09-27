@@ -15,7 +15,7 @@ export class NewCRPeopleComponent implements OnInit {
     formShell: FormGroup;
     index: number;
     
-    constructor(private reportFormDataService: ReportService, private _fb: FormBuilder, public dialog: MdDialog) { }
+    constructor(private reportFormDataService: ReportService, private _fb: FormBuilder) { }
 
     ngOnInit() {
         this.formShell = this._fb.group({
