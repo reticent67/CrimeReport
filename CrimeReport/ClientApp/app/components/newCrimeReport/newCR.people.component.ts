@@ -5,9 +5,9 @@ import { Validators, FormGroup, FormArray, FormBuilder } from '@angular/forms';
 
 
 @Component({
-    selector: 'newCR-people',
+    selector:    'newCR-people',
     templateUrl: './newCR.people.component.html',
-    styleUrls: ['./newCR.css']
+    styleUrls:   ['./newCR.css']
 
 })
 
