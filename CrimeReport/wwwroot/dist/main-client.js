@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "7db32a9ea999b534411f"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "4cc043793998e7e49144"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -968,7 +968,7 @@ var MainMenuComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'main-menu',
             template: __webpack_require__(35),
-            styles: [__webpack_require__(46), __webpack_require__(2)]
+            styles: [__webpack_require__(46)]
         })
     ], MainMenuComponent);
     return MainMenuComponent;
@@ -8313,19 +8313,19 @@ module.exports = XmlEntities;
 /* 34 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid\">\n    <div class=\"row text-center\">\n        <h1>Add a new Nav Menu</h1>\n    </div>\n    <div class=\"row\">\n       <div class=\"col-sm-12\">\n            <router-outlet></router-outlet>\n        </div>\n    </div>\n</div>";
+module.exports = "<div class=\"container-fluid\">\n    <div class=\"row text-center\">\n        <h1>Add a new Nav Menu</h1>\n    </div>\n    <div class=\"row\">\n        <div>\n            <router-outlet></router-outlet>\n        </div>\n    </div>\n</div>";
 
 /***/ }),
 /* 35 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"menu-wrap\" flex=\"50\">\n    <md-grid-list class=\"center\" cols=\"3\" rows=\"2\" gutterSize=\"5px\">\n        <md-grid-tile class=\"menu-tile\" [routerLink]=\"['/newCR-start']\">\n            <span class='glyphicon glyphicon-education'></span>New Crime Report\n        </md-grid-tile>\n        <md-grid-tile class=\"menu-tile\">2</md-grid-tile>\n        <md-grid-tile class=\"menu-tile\">3</md-grid-tile>\n        <md-grid-tile class=\"menu-tile\">4</md-grid-tile>\n        <md-grid-tile class=\"menu-tile\">5</md-grid-tile>\n        <md-grid-tile class=\"menu-tile\">6</md-grid-tile>\n    </md-grid-list>\n</div>";
+module.exports = "<div class=\"menu-wrap\">\n    <md-grid-list class=\"center\" cols=\"3\" rows=\"2\" gutterSize=\"5px\">\n        <md-grid-tile class=\"menu-tile\" [routerLink]=\"['/newCR-start']\">\n            <span class='glyphicon glyphicon-education'></span>New Crime Report\n        </md-grid-tile>\n        <md-grid-tile class=\"menu-tile\">2</md-grid-tile>\n        <md-grid-tile class=\"menu-tile\">3</md-grid-tile>\n        <md-grid-tile class=\"menu-tile\">4</md-grid-tile>\n        <md-grid-tile class=\"menu-tile\">5</md-grid-tile>\n        <md-grid-tile class=\"menu-tile\">6</md-grid-tile>\n    </md-grid-list>\n</div>";
 
 /***/ }),
 /* 36 */
 /***/ (function(module, exports) {
 
-module.exports = "<md-card class=\"center\">\n    <form [formGroup]=\"detailsForm\" (ngSubmit)=\"save(detailsForm)\">\n        <div class=\"tab-pane fade in active\">\n            <h4 class=\"text-center\">{{title}}</h4>\n        </div>\n        <md-form-field>\n            <input mdInput placeholder=\"Report Title\" formControlName=\"reportTitle\">\n        </md-form-field>\n        <p>\n            <md-form-field>\n                <input mdInput placeholder=\"Incident Number\" formControlName=\"incidentNum\">\n            </md-form-field>\n        </p>\n        <md-form-field class=\"col-md-4\">\n            <input mdInput [mdDatepicker]=\"occurranceStart\" placeholder=\"Start Date\">\n            <md-datepicker-toggle mdSuffix [for]=\"occurranceStart\"></md-datepicker-toggle>\n            <md-datepicker touchUi=\"true\" #occurranceStart></md-datepicker>\n        </md-form-field>\n        <md-form-field class=\"col-md-4\">\n            <input mdInput placeholder=\"Start Time\" type=\"time\">\n        </md-form-field>\n        <p>\n            <md-form-field>\n                <input mdInput [mdDatepicker]=\"occurranceEnd\" placeholder=\"End Date\">\n                <md-datepicker-toggle mdSuffix [for]=\"occurranceEnd\"></md-datepicker-toggle>\n                <md-datepicker touchUi=\"true\" #occurranceEnd></md-datepicker>\n            </md-form-field>\n        </p>\n\n        <p>\n            <md-form-field>\n                <input mdInput placeholder=\"Location\" formControlName=\"occurranceLoc\">\n            </md-form-field>\n        </p>\n        <md-action-row> </md-action-row>\n        <md-card-actions>\n            <div class=\"form-group text-center\">\n                <button md-raised-button [routerLinkActive]=\"['link-active']\" [routerLink]=\"['../newCR-people']\" type=\"submit\"> Next <md-icon>navigate_next</md-icon></button>\n            </div>\n        </md-card-actions>\n    </form>\n</md-card>";
+module.exports = "<md-card class=\"center\">\n    <form [formGroup]=\"detailsForm\" (ngSubmit)=\"save(detailsForm)\">\n        <div class=\"tab-pane fade in active\">\n            <h4 class=\"text-center\">{{title}}</h4>\n        </div>\n        <table>\n            <tr>\n                <td>\n                    <md-form-field>\n                        <input mdInput placeholder=\"Report Title\" formControlName=\"reportTitle\">\n                    </md-form-field>\n                </td>\n            </tr>\n            <tr>\n                <td>\n                    <md-form-field>\n                        <input mdInput placeholder=\"Incident Number\" formControlName=\"incidentNum\">\n                    </md-form-field>\n                </td>\n            </tr>\n            <tr>\n                <td>\n                    <md-form-field>\n                        <input mdInput [mdDatepicker]=\"occurranceStart\" placeholder=\"Start Date\">\n                        <md-datepicker-toggle mdSuffix [for]=\"occurranceStart\"></md-datepicker-toggle>\n                        <md-datepicker touchUi=\"true\" #occurranceStart></md-datepicker>\n                    </md-form-field>\n                </td>\n                <td class=\"col-md-1\"></td>\n                <td>\n                    <md-form-field>\n                        <input mdInput placeholder=\"Start Time\" type=\"time\">\n                    </md-form-field>\n                </td>\n            </tr>\n            <tr>\n                <td>\n                    <md-form-field>\n                        <input mdInput [mdDatepicker]=\"occurranceEnd\" placeholder=\"End Date\">\n                        <md-datepicker-toggle mdSuffix [for]=\"occurranceEnd\"></md-datepicker-toggle>\n                        <md-datepicker touchUi=\"true\" #occurranceEnd></md-datepicker>\n                    </md-form-field>\n                </td>\n                <td class=\"col-md-1\"></td>\n                <td>\n                    <md-form-field>\n                        <input mdInput placeholder=\"End Time\" type=\"time\">\n                    </md-form-field>\n                </td>\n            </tr>\n        </table>\n        <p>\n            <md-form-field class=\"col-md-12\">\n                <input mdInput placeholder=\"Location\" formControlName=\"occurranceLoc\">\n            </md-form-field>\n        </p>\n        <md-action-row></md-action-row>\n        <md-card-actions class=\"center\">\n            <div class=\"form-group text-center\">\n                <button md-raised-button [routerLinkActive]=\"['link-active']\" [routerLink]=\"['../newCR-people']\" type=\"submit\"> Next <md-icon>navigate_next</md-icon></button>\n            </div>\n        </md-card-actions>\n    </form>\n</md-card>";
 
 /***/ }),
 /* 37 */
