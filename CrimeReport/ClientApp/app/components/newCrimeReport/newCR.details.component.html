@@ -3,57 +3,36 @@
         <div class="tab-pane fade in active">
             <h4 class="text-center">{{title}}</h4>
         </div>
-        <table>
-            <tr>
-                <td>
-                    <md-form-field>
-                        <input mdInput placeholder="Report Title" formControlName="reportTitle">
-                    </md-form-field>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <md-form-field>
-                        <input mdInput placeholder="Incident Number" formControlName="incidentNum">
-                    </md-form-field>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <md-form-field>
-                        <input mdInput [mdDatepicker]="occurranceStart" placeholder="Start Date">
-                        <md-datepicker-toggle mdSuffix [for]="occurranceStart"></md-datepicker-toggle>
-                        <md-datepicker touchUi="true" #occurranceStart></md-datepicker>
-                    </md-form-field>
-                </td>
-                <td class="col-md-1"></td>
-                <td>
-                    <md-form-field>
-                        <input mdInput placeholder="Start Time" type="time">
-                    </md-form-field>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <md-form-field>
-                        <input mdInput [mdDatepicker]="occurranceEnd" placeholder="End Date">
-                        <md-datepicker-toggle mdSuffix [for]="occurranceEnd"></md-datepicker-toggle>
-                        <md-datepicker touchUi="true" #occurranceEnd></md-datepicker>
-                    </md-form-field>
-                </td>
-                <td class="col-md-1"></td>
-                <td>
-                    <md-form-field>
-                        <input mdInput placeholder="End Time" type="time">
-                    </md-form-field>
-                </td>
-            </tr>
-        </table>
+
+        <md-form-field>
+            <input mdInput placeholder="Report Title" formControlName="reportTitle">
+        </md-form-field>
         <p>
-            <md-form-field class="col-md-12">
-                <input mdInput placeholder="Location" formControlName="occurranceLoc">
+            <md-form-field>
+                <input mdInput placeholder="Incident Number" formControlName="incidentNum">
             </md-form-field>
         </p>
+        <md-form-field>
+            <input mdInput [mdDatepicker]="occurranceStart" placeholder="Start Date">
+            <md-datepicker-toggle mdSuffix [for]="occurranceStart"></md-datepicker-toggle>
+            <md-datepicker touchUi="true" #occurranceStart></md-datepicker>
+        </md-form-field>
+
+        <md-form-field>
+            <input mdInput placeholder="Start Time" type="time">
+        </md-form-field>
+
+        <md-form-field>
+            <input mdInput [mdDatepicker]="occurranceEnd" placeholder="End Date">
+            <md-datepicker-toggle mdSuffix [for]="occurranceEnd"></md-datepicker-toggle>
+            <md-datepicker touchUi="true" #occurranceEnd></md-datepicker>
+        </md-form-field>
+        <md-form-field>
+            <input mdInput placeholder="End Time" type="time">
+        </md-form-field>
+        <md-form-field>
+            <input mdInput placeholder="Location" formControlName="occurranceLoc">
+        </md-form-field>
         <md-action-row></md-action-row>
         <md-card-actions class="center">
             <div class="form-group text-center">
