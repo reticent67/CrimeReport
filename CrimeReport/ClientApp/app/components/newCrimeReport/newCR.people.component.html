@@ -1,73 +1,53 @@
-<md-card class="center">
+<mat-card class="center">
     <form [formGroup]="formShell" (ngSubmit)="save(formShell)">
-
-        <!-- Begin People Array -->
-
-        <div formArrayName="people">
-            <div *ngFor="let person of formShell.controls.people.controls; let i=index" class="panel panel-default">
-                <!-- Angular assigns array index as group name by default 0, 1, 2, ... -->
-                <div [formGroupName]="i">
-                    <md-expansion-panel [expanded]="true">
-                        <md-expansion-panel-header>
-                            <md-panel-title>
-                                Person {{i + 1}}
-                            </md-panel-title>
-                            <md-panel-description>
-                                <md-icon class="pull-right" *ngIf="formShell.controls.people.controls.length > 1" (click)="removePerson(i)">delete</md-icon>
-                            </md-panel-description>
-                        </md-expansion-panel-header>
-
-                        <md-form-field>
-                            <input mdInput placeholder="Last Name" formControlName="lastName">
-                        </md-form-field>
-                        <md-form-field>
-                            <input mdInput placeholder="First Name" formControlName="firstName">
-                        </md-form-field>
-
-                        <md-form-field>
-                            <input mdInput placeholder="Middle Name" formControlName="middleName">
-                        </md-form-field>
-
-                        <div class="panel">
-                            <div formArrayName="addresses">
-                                <div *ngFor="let address of person.controls.addresses.controls; let j=index" class="panel panel-primary">
-                                    <div class="panel-heading">
-                                        <span>Address {{j + 1}}</span>
-                                        <md-icon class="pull-right" *ngIf="person.controls.addresses.controls.length > 1" (click)="removeAddress(person, j)">delete</md-icon>
-                                    </div>
-                                    <div class="panel-body" [formGroupName]="j">
-                                        <div>
-                                            <md-form-field class="col-xs-12">
-                                                <input mdInput placeholder="Address" formControlName="street" [mdAutocomplete]="auto">
-                                            </md-form-field>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <button (click)="addAddress(person)" class="btn btn-primary">
-                                Add another Address +
-                            </button>
-                    </md-expansion-panel>
+        <mat-vertical-stepper>
+            <mat-step label="Role">
+                <mat-card class="center">
+                    <h4>This person is a...</h4>
+                    <mat-grid-list class="center" cols="1" gutterSize="5px">
+                        <mat-grid-tile>
+                            <button mat-raised-button class='step-button' matStepperNext>Victim</button>
+                        </mat-grid-tile>
+                        <mat-grid-tile>
+                            <button mat-raised-button class='step-button' matStepperNext>Suspect</button>
+                        </mat-grid-tile>
+                        <mat-grid-tile>
+                            <button mat-raised-button class='step-button' matStepperNext>Witness</button>
+                        </mat-grid-tile>
+                    </mat-grid-list>
+                </mat-card>
+            </mat-step>
+            <mat-step label="Personal Info">
+                <mat-card class="center">
+                    <h4>Enter this person by...</h4>
+                    <mat-grid-list class="center" cols="1" gutterSize="5px">
+                        <mat-grid-tile>
+                            <button mat-raised-button class='step-button' matStepperNext>Scan ID</button>
+                        </mat-grid-tile>
+                        <mat-grid-tile>
+                            <button mat-raised-button class='step-button' matStepperNext>Name/ID Search</button>
+                        </mat-grid-tile>
+                        <mat-grid-tile>
+                            <button mat-raised-button class='step-button' matStepperNext>Manual Entry</button>
+                        </mat-grid-tile>
+                    </mat-grid-list>
+                </mat-card>
+                <div>
+                    <button mat-raised-button matStepperPrevious>Back</button>
                 </div>
-            </div>
-        </div>
+            </mat-step>
+            <mat-step label="Involved Vehicles">
+                <input MdInput placeholder="3">
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </mat-step>
 
-        <!-- End People Array-->
-        <!-- Submit Button-->
-        <div>
-            <div>
-                <button md-raised-button color="primary" (click)="addPerson()">Add person<md-icon class="pull-right">person_add</md-icon></button>
-            </div>
-        </div>
-        <md-action-row> </md-action-row>
-        <md-card-actions>
-            <div class="form-group text-center">
-                <button md-raised-button type="submit"><md-icon>navigate_before</md-icon>Previous </button>
-                <button md-raised-button type="submit"> Next <md-icon>navigate_next</md-icon></button>
-            </div>
-        </md-card-actions>
+
+
+        </mat-vertical-stepper>
+
 
     </form>
-</md-card>
+</mat-card>

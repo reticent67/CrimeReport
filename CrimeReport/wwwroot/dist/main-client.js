@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "b70c6b207be9680f699b"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "4ed61e110b04abb0f855"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -724,7 +724,7 @@ module.exports = (__webpack_require__(0))(0);
 /***/ (function(module, exports, __webpack_require__) {
 
 
-        var result = __webpack_require__(30);
+        var result = __webpack_require__(31);
 
         if (typeof result === "string") {
             module.exports = result;
@@ -938,8 +938,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app',
-            template: __webpack_require__(34),
-            styles: [__webpack_require__(45)]
+            template: __webpack_require__(35),
+            styles: [__webpack_require__(46)]
         })
     ], AppComponent);
     return AppComponent;
@@ -967,8 +967,8 @@ var MainMenuComponent = (function () {
     MainMenuComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'main-menu',
-            template: __webpack_require__(35),
-            styles: [__webpack_require__(46)]
+            template: __webpack_require__(36),
+            styles: [__webpack_require__(47)]
         })
     ], MainMenuComponent);
     return MainMenuComponent;
@@ -1024,7 +1024,7 @@ var NewCRDetailsComponent = (function () {
     NewCRDetailsComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'newCR-details',
-            template: __webpack_require__(36),
+            template: __webpack_require__(37),
             styles: [__webpack_require__(2)]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"], __WEBPACK_IMPORTED_MODULE_2__services_ReportService__["a" /* ReportService */]])
@@ -1044,6 +1044,7 @@ var NewCRDetailsComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_ReportService__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_reportForm_model__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_material__ = __webpack_require__(16);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1057,10 +1058,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var NewCRPeopleComponent = (function () {
-    function NewCRPeopleComponent(reportFormDataService, _fb) {
+    function NewCRPeopleComponent(reportFormDataService, _fb, dialog) {
         this.reportFormDataService = reportFormDataService;
         this._fb = _fb;
+        this.dialog = dialog;
         this.title = 'Add the People Involved';
     }
     NewCRPeopleComponent.prototype.ngOnInit = function () {
@@ -1124,10 +1127,10 @@ var NewCRPeopleComponent = (function () {
     NewCRPeopleComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'newCR-people',
-            template: __webpack_require__(37),
+            template: __webpack_require__(38),
             styles: [__webpack_require__(2)]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_ReportService__["a" /* ReportService */], __WEBPACK_IMPORTED_MODULE_3__angular_forms__["FormBuilder"]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_ReportService__["a" /* ReportService */], __WEBPACK_IMPORTED_MODULE_3__angular_forms__["FormBuilder"], __WEBPACK_IMPORTED_MODULE_4__angular_material__["MatDialog"]])
     ], NewCRPeopleComponent);
     return NewCRPeopleComponent;
 }());
@@ -1168,7 +1171,7 @@ var NewCRStartComponent = (function () {
     NewCRStartComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'newCR-start',
-            template: __webpack_require__(39),
+            template: __webpack_require__(40),
             styles: [__webpack_require__(2)],
             providers: [__WEBPACK_IMPORTED_MODULE_1__services_ReportService__["a" /* ReportService */]]
         }),
@@ -1486,11 +1489,17 @@ module.exports = (__webpack_require__(0))(13);
 
 /***/ }),
 /* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = (__webpack_require__(0))(72);
+
+/***/ }),
+/* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_reflect_metadata__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_reflect_metadata__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_reflect_metadata___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_reflect_metadata__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_zone_js__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_zone_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_zone_js__);
@@ -1498,7 +1507,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bootstrap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_bootstrap__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser_dynamic__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_app_module_browser__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_app_module_browser__ = __webpack_require__(24);
 
 
 
@@ -1524,7 +1533,7 @@ var modulePromise = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__angular_p
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(__resourceQuery, module) {/*eslint-env browser*/
@@ -1540,7 +1549,7 @@ var options = {
   name: ''
 };
 if (true) {
-  var querystring = __webpack_require__(42);
+  var querystring = __webpack_require__(43);
   var overrides = querystring.parse(__resourceQuery.slice(1));
   if (overrides.path) options.path = overrides.path;
   if (overrides.timeout) options.timeout = overrides.timeout;
@@ -1660,11 +1669,11 @@ if (typeof window !== 'undefined') {
 }
 
 function createReporter() {
-  var strip = __webpack_require__(44);
+  var strip = __webpack_require__(45);
 
   var overlay;
   if (typeof document !== 'undefined' && options.overlay) {
-    overlay = __webpack_require__(47);
+    overlay = __webpack_require__(48);
   }
 
   var styles = {
@@ -1717,7 +1726,7 @@ function createReporter() {
   };
 }
 
-var processUpdate = __webpack_require__(48);
+var processUpdate = __webpack_require__(49);
 
 var customHandler;
 var subscribeAllHandler;
@@ -1782,16 +1791,16 @@ if (module) {
   };
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, "?path=__webpack_hmr&dynamicPublicPath=true", __webpack_require__(49)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, "?path=__webpack_hmr&dynamicPublicPath=true", __webpack_require__(50)(module)))
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(0))(78);
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6749,7 +6758,7 @@ function supportsWebAnimations() {
 
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6770,7 +6779,7 @@ function supportsWebAnimations() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_animations__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_animations_browser__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_animations_browser__ = __webpack_require__(20);
 
 /**
  * @license Angular v4.2.5
@@ -7484,7 +7493,7 @@ NoopAnimationsModule.ctorParameters = function () { return []; };
 
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7667,7 +7676,7 @@ ansiHTML.reset()
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7678,7 +7687,7 @@ module.exports = function () {
 
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7686,7 +7695,7 @@ module.exports = function () {
 /* unused harmony export getBaseUrl */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_module_shared__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_module_shared__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_app_app_component__ = __webpack_require__(6);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -7722,24 +7731,25 @@ function getBaseUrl() {
 
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModuleShared; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser_animations__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_module__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_routes__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_app_app_component__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_mainmenu_mainmenu_component__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_newCrimeReport_newCR_start_component__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_newCrimeReport_newCR_progBar_component__ = __webpack_require__(26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_newCrimeReport_newCR_details_component__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_newCrimeReport_newCR_people_component__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser_animations__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_module__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_material__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_routes__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_app_app_component__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_mainmenu_mainmenu_component__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_newCrimeReport_newCR_start_component__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_newCrimeReport_newCR_progBar_component__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_newCrimeReport_newCR_details_component__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_newCrimeReport_newCR_people_component__ = __webpack_require__(9);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -7759,18 +7769,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var AppModuleShared = (function () {
     function AppModuleShared() {
     }
     AppModuleShared = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            providers: [
+                { provide: __WEBPACK_IMPORTED_MODULE_6__angular_material__["MATERIAL_COMPATIBILITY_MODE"], useValue: true }
+            ],
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_7__components_app_app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__components_mainmenu_mainmenu_component__["a" /* MainMenuComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__components_newCrimeReport_newCR_start_component__["a" /* NewCRStartComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__components_newCrimeReport_newCR_progBar_component__["a" /* NewCRProgBarComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__components_newCrimeReport_newCR_details_component__["a" /* NewCRDetailsComponent */],
-                __WEBPACK_IMPORTED_MODULE_12__components_newCrimeReport_newCR_people_component__["a" /* NewCRPeopleComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__components_app_app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__components_mainmenu_mainmenu_component__["a" /* MainMenuComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__components_newCrimeReport_newCR_start_component__["a" /* NewCRStartComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__components_newCrimeReport_newCR_progBar_component__["a" /* NewCRProgBarComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__components_newCrimeReport_newCR_details_component__["a" /* NewCRDetailsComponent */],
+                __WEBPACK_IMPORTED_MODULE_13__components_newCrimeReport_newCR_people_component__["a" /* NewCRPeopleComponent */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
@@ -7779,7 +7793,7 @@ var AppModuleShared = (function () {
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["ReactiveFormsModule"],
                 __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
                 __WEBPACK_IMPORTED_MODULE_5__material_module__["a" /* MaterialModule */],
-                __WEBPACK_IMPORTED_MODULE_6__app_routes__["a" /* AppRoutes */]
+                __WEBPACK_IMPORTED_MODULE_7__app_routes__["a" /* AppRoutes */]
             ]
         })
     ], AppModuleShared);
@@ -7789,7 +7803,7 @@ var AppModuleShared = (function () {
 
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7821,7 +7835,7 @@ var AppRoutes = __WEBPACK_IMPORTED_MODULE_0__angular_router__["RouterModule"].fo
 
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7840,7 +7854,7 @@ var NewCRProgBarComponent = (function () {
     NewCRProgBarComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'newCR-progBar',
-            template: __webpack_require__(38),
+            template: __webpack_require__(39),
             styles: [__webpack_require__(2)]
         })
     ], NewCRProgBarComponent);
@@ -7850,13 +7864,13 @@ var NewCRProgBarComponent = (function () {
 
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MaterialModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__(16);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -7871,68 +7885,70 @@ var MaterialModule = (function () {
     MaterialModule = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdAutocompleteModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdButtonModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdButtonToggleModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdCardModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdCheckboxModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdChipsModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdDatepickerModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdDialogModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdExpansionModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdGridListModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdIconModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdInputModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdListModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdMenuModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdNativeDateModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdPaginatorModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdProgressBarModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdProgressSpinnerModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdRadioModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdRippleModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdSelectModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdSidenavModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdSliderModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdSlideToggleModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdSnackBarModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdSortModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdTableModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdTabsModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdToolbarModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdTooltipModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatAutocompleteModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatButtonModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatButtonToggleModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatCardModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatCheckboxModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatChipsModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatDatepickerModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatDialogModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatExpansionModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatGridListModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatIconModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatInputModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatListModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatMenuModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatNativeDateModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatPaginatorModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatProgressBarModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatProgressSpinnerModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatRadioModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatRippleModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatSelectModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatSidenavModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatSliderModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatSlideToggleModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatSnackBarModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatSortModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatTableModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatTabsModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatToolbarModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatTooltipModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatStepperModule"]
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdAutocompleteModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdButtonModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdButtonToggleModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdCardModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdCheckboxModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdChipsModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdDatepickerModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdDialogModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdExpansionModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdGridListModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdIconModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdInputModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdListModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdMenuModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdNativeDateModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdPaginatorModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdProgressBarModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdProgressSpinnerModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdRadioModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdRippleModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdSelectModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdSidenavModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdSliderModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdSlideToggleModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdSnackBarModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdSortModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdTableModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdTabsModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdToolbarModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MdTooltipModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatAutocompleteModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatButtonModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatButtonToggleModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatCardModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatCheckboxModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatChipsModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatDatepickerModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatDialogModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatExpansionModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatGridListModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatIconModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatInputModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatListModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatMenuModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatNativeDateModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatPaginatorModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatProgressBarModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatProgressSpinnerModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatRadioModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatRippleModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatSelectModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatSidenavModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatSliderModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatSlideToggleModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatSnackBarModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatSortModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatTableModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatTabsModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatToolbarModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatTooltipModule"],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["MatStepperModule"]
             ],
         })
     ], MaterialModule);
@@ -7942,7 +7958,7 @@ var MaterialModule = (function () {
 
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(4)(undefined);
@@ -7956,20 +7972,6 @@ exports.push([module.i, "@media (max-width: 767px) {\n    /* On small screens, t
 
 
 /***/ }),
-/* 29 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(4)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, ".menu-tile {\n    border-radius: 3px;\n}\n\n.menu-wrap {\n    height: 95vh;\n    display: flex;\n    margin-top: 10%;\n    justify-content: center;\n    align-items: center;\n}\n\n@media (max-width: 900px) {\n    .menu-wrap {\n        height: 50vh;\n    }\n}", ""]);
-
-// exports
-
-
-/***/ }),
 /* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7978,7 +7980,7 @@ exports = module.exports = __webpack_require__(4)(undefined);
 
 
 // module
-exports.push([module.i, "md-grid-tile {\n    background: lightblue;\n}\n\n.card-wrap {\n    height: 10vh;\n    display: flex;\n    margin-top: 5%;\n    justify-content: center;\n    align-items: center;\n}\n\n.app-title {\n    font-size: 24px;\n}\n\n.person-entry {\n    width: 100%;\n}\n\n.entry-method {\n    display: inline-flex;\n    flex-direction: column;\n}\n\n.entry-method-button {\n    margin: 5px;\n}\n\n\n/*Progress Bar*/\n\na {\n    text-decoration: none;\n}\n\n.menu-wrap {\n    position: relative;\n    margin-bottom: 6px;\n    margin-top: 10px;\n    max-height: 96px;\n    overflow-x: auto;\n    overflow-y: hidden;\n    /* Make an auto-hiding scroller for the 3 people using a IE */\n    -ms-overflow-style: -ms-autohiding-scrollbar;\n    /* For WebKit implementations, provide inertia scrolling */\n    -webkit-overflow-scrolling: touch;\n    /* We don't want internal inline elements to wrap */\n    white-space: nowrap;\n    /* Remove the default scrollbar for WebKit implementations */\n}\n\n.menu-wrap::-webkit-scrollbar {\n    display: none;\n}\n\n.app-menu {\n    list-style: none;\n    width: 100%;\n    margin: 0;\n    margin-bottom: 20px;\n    padding: 0;\n    padding-left: 8px;\n}\n\n.menu-item {\n    font-size: 16px;\n    color: #ffffff;\n    background: #283d50;\n    height: 60px;\n    line-height: 60px;\n    padding: 0 45px;\n    border-radius: 3px;\n    font-family: sans-serif;\n    position: relative;\n    margin-right: 10px;\n    display: inline-block;\n}\n\n.item-number {\n    position: absolute;\n    left: 2px;\n    top: 0;\n    font-size: 96px;\n    font-weight: 700;\n    overflow: hidden;\n    display: block;\n    color: white;\n}\n\n.menu-text {\n    padding-left: 36px;\n    color: white;\n    text-align: center;\n}\n\n.menu-item:hover {\n    background: #0F7F8C;\n}\n\n.link-active {\n    margin-top: 6px;\n    background: #0F7F8C;\n    align-self: center;\n}\n\n.link-active::after {\n    content: \"\";\n    width: 5px;\n    height: 5px;\n    background: transparent;\n    -webkit-transform: rotate(45deg);\n    -moz-transform: rotate(45deg);\n    -o-transform: rotate(45deg);\n    -ms-transform: rotate(45deg);\n    transform: rotate(45deg);\n    position: absolute;\n    bottom: -10px;\n    left: 50%;\n    margin-left: -12px;\n    border: 12px solid black;\n    border-top-color: black;\n    border-right-color: black;\n    border-bottom-color: black;\n    border-left-color: black;\n    border-color: transparent #0F7F8C #0F7F8C transparent;\n    z-index: -1;\n}\n\n@media only screen and (max-width: 900px) {\n    .body-content {\n        padding-top: 0;\n    }\n    .app-title {\n        font-size: 16px;\n    }\n    /*Progress Bar*/\n    .app-menu {\n        padding-left: 0;\n    }\n    .menu-item div {\n        display: none;\n        float: none;\n        position: fixed;\n    }\n}", ""]);
+exports.push([module.i, ".menu-tile {\n    border: 1px solid black;\n    border-radius: 3px;\n}\n\n.menu-wrap {\n    height: 95vh;\n    display: flex;\n    margin-top: 10%;\n    justify-content: center;\n    align-items: center;\n}\n\n@media (max-width: 900px) {\n    .menu-wrap {\n        height: 50vh;\n    }\n}", ""]);
 
 // exports
 
@@ -7987,16 +7989,30 @@ exports.push([module.i, "md-grid-tile {\n    background: lightblue;\n}\n\n.card-
 /* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
+exports = module.exports = __webpack_require__(4)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "mat-grid-tile {\n    background: lightblue;\n}\n\n.card-wrap {\n    height: 10vh;\n    display: flex;\n    margin-top: 5%;\n    justify-content: center;\n    align-items: center;\n}\n\n.app-title {\n    font-size: 24px;\n}\n\n.person-entry {\n    width: 100%;\n}\n\n.entry-method {\n    display: inline-flex;\n    flex-direction: column;\n}\n\n.entry-method-button {\n    margin: 5px;\n}\n\n.step-button {\n    height: 98%;\n    width: 98%;\n    font-size: 16px;\n}\n\n\n/*Progress Bar*/\n\na {\n    text-decoration: none;\n}\n\n.menu-wrap {\n    position: relative;\n    margin-bottom: 6px;\n    margin-top: 10px;\n    max-height: 96px;\n    overflow-x: auto;\n    overflow-y: hidden;\n    /* Make an auto-hiding scroller for the 3 people using a IE */\n    -ms-overflow-style: -ms-autohiding-scrollbar;\n    /* For WebKit implementations, provide inertia scrolling */\n    -webkit-overflow-scrolling: touch;\n    /* We don't want internal inline elements to wrap */\n    white-space: nowrap;\n    /* Remove the default scrollbar for WebKit implementations */\n}\n\n.menu-wrap::-webkit-scrollbar {\n    display: none;\n}\n\n.app-menu {\n    list-style: none;\n    width: 100%;\n    margin: 0;\n    margin-bottom: 20px;\n    padding: 0;\n    padding-left: 8px;\n}\n\n.menu-item {\n    font-size: 16px;\n    color: #ffffff;\n    background: #283d50;\n    height: 60px;\n    line-height: 60px;\n    padding: 0 45px;\n    border-radius: 3px;\n    font-family: sans-serif;\n    position: relative;\n    margin-right: 10px;\n    display: inline-block;\n}\n\n.item-number {\n    position: absolute;\n    left: 2px;\n    top: 0;\n    font-size: 96px;\n    font-weight: 700;\n    overflow: hidden;\n    display: block;\n    color: white;\n}\n\n.menu-text {\n    padding-left: 36px;\n    color: white;\n    text-align: center;\n}\n\n.menu-item:hover {\n    background: #0F7F8C;\n}\n\n.link-active {\n    margin-top: 6px;\n    background: #0F7F8C;\n    align-self: center;\n}\n\n.link-active::after {\n    content: \"\";\n    width: 5px;\n    height: 5px;\n    background: transparent;\n    -webkit-transform: rotate(45deg);\n    -moz-transform: rotate(45deg);\n    -o-transform: rotate(45deg);\n    -ms-transform: rotate(45deg);\n    transform: rotate(45deg);\n    position: absolute;\n    bottom: -10px;\n    left: 50%;\n    margin-left: -12px;\n    border: 12px solid black;\n    border-top-color: black;\n    border-right-color: black;\n    border-bottom-color: black;\n    border-left-color: black;\n    border-color: transparent #0F7F8C #0F7F8C transparent;\n    z-index: -1;\n}\n\n@media only screen and (max-width: 900px) {\n    .body-content {\n        padding-top: 0;\n    }\n    .app-title {\n        font-size: 16px;\n    }\n    /*Progress Bar*/\n    .app-menu {\n        padding-left: 0;\n    }\n    .menu-item div {\n        display: none;\n        float: none;\n        position: fixed;\n    }\n}", ""]);
+
+// exports
+
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
 module.exports = {
-  XmlEntities: __webpack_require__(33),
-  Html4Entities: __webpack_require__(32),
+  XmlEntities: __webpack_require__(34),
+  Html4Entities: __webpack_require__(33),
   Html5Entities: __webpack_require__(12),
   AllHtmlEntities: __webpack_require__(12)
 };
 
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports) {
 
 var HTML_ALPHA = ['apos', 'nbsp', 'iexcl', 'cent', 'pound', 'curren', 'yen', 'brvbar', 'sect', 'uml', 'copy', 'ordf', 'laquo', 'not', 'shy', 'reg', 'macr', 'deg', 'plusmn', 'sup2', 'sup3', 'acute', 'micro', 'para', 'middot', 'cedil', 'sup1', 'ordm', 'raquo', 'frac14', 'frac12', 'frac34', 'iquest', 'Agrave', 'Aacute', 'Acirc', 'Atilde', 'Auml', 'Aring', 'Aelig', 'Ccedil', 'Egrave', 'Eacute', 'Ecirc', 'Euml', 'Igrave', 'Iacute', 'Icirc', 'Iuml', 'ETH', 'Ntilde', 'Ograve', 'Oacute', 'Ocirc', 'Otilde', 'Ouml', 'times', 'Oslash', 'Ugrave', 'Uacute', 'Ucirc', 'Uuml', 'Yacute', 'THORN', 'szlig', 'agrave', 'aacute', 'acirc', 'atilde', 'auml', 'aring', 'aelig', 'ccedil', 'egrave', 'eacute', 'ecirc', 'euml', 'igrave', 'iacute', 'icirc', 'iuml', 'eth', 'ntilde', 'ograve', 'oacute', 'ocirc', 'otilde', 'ouml', 'divide', 'oslash', 'ugrave', 'uacute', 'ucirc', 'uuml', 'yacute', 'thorn', 'yuml', 'quot', 'amp', 'lt', 'gt', 'OElig', 'oelig', 'Scaron', 'scaron', 'Yuml', 'circ', 'tilde', 'ensp', 'emsp', 'thinsp', 'zwnj', 'zwj', 'lrm', 'rlm', 'ndash', 'mdash', 'lsquo', 'rsquo', 'sbquo', 'ldquo', 'rdquo', 'bdquo', 'dagger', 'Dagger', 'permil', 'lsaquo', 'rsaquo', 'euro', 'fnof', 'Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta', 'Eta', 'Theta', 'Iota', 'Kappa', 'Lambda', 'Mu', 'Nu', 'Xi', 'Omicron', 'Pi', 'Rho', 'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega', 'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta', 'iota', 'kappa', 'lambda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho', 'sigmaf', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega', 'thetasym', 'upsih', 'piv', 'bull', 'hellip', 'prime', 'Prime', 'oline', 'frasl', 'weierp', 'image', 'real', 'trade', 'alefsym', 'larr', 'uarr', 'rarr', 'darr', 'harr', 'crarr', 'lArr', 'uArr', 'rArr', 'dArr', 'hArr', 'forall', 'part', 'exist', 'empty', 'nabla', 'isin', 'notin', 'ni', 'prod', 'sum', 'minus', 'lowast', 'radic', 'prop', 'infin', 'ang', 'and', 'or', 'cap', 'cup', 'int', 'there4', 'sim', 'cong', 'asymp', 'ne', 'equiv', 'le', 'ge', 'sub', 'sup', 'nsub', 'sube', 'supe', 'oplus', 'otimes', 'perp', 'sdot', 'lceil', 'rceil', 'lfloor', 'rfloor', 'lang', 'rang', 'loz', 'spades', 'clubs', 'hearts', 'diams'];
@@ -8149,7 +8165,7 @@ module.exports = Html4Entities;
 
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports) {
 
 var ALPHA_INDEX = {
@@ -8310,43 +8326,43 @@ module.exports = XmlEntities;
 
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"container-fluid\">\n    <div class=\"row text-center\">\n        <h1>Add a new Nav Menu</h1>\n    </div>\n    <div class=\"row\">\n        <div>\n            <router-outlet></router-outlet>\n        </div>\n    </div>\n</div>";
 
 /***/ }),
-/* 35 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"menu-wrap\">\n    <md-grid-list class=\"center\" cols=\"3\" rows=\"2\" gutterSize=\"5px\">\n        <md-grid-tile class=\"menu-tile\" [routerLink]=\"['/newCR-start']\">\n            <span class='glyphicon glyphicon-education'></span>New Crime Report\n        </md-grid-tile>\n        <md-grid-tile class=\"menu-tile\">2</md-grid-tile>\n        <md-grid-tile class=\"menu-tile\">3</md-grid-tile>\n        <md-grid-tile class=\"menu-tile\">4</md-grid-tile>\n        <md-grid-tile class=\"menu-tile\">5</md-grid-tile>\n        <md-grid-tile class=\"menu-tile\">6</md-grid-tile>\n    </md-grid-list>\n</div>";
-
-/***/ }),
 /* 36 */
 /***/ (function(module, exports) {
 
-module.exports = "<md-card class=\"center\">\n    <form [formGroup]=\"detailsForm\" (ngSubmit)=\"save(detailsForm)\">\n        <div class=\"tab-pane fade in active\">\n            <h4 class=\"text-center\">{{title}}</h4>\n        </div>\n\n        <md-form-field>\n            <input mdInput placeholder=\"Report Title\" formControlName=\"reportTitle\">\n        </md-form-field>\n        <p>\n            <md-form-field>\n                <input mdInput placeholder=\"Incident Number\" formControlName=\"incidentNum\">\n            </md-form-field>\n        </p>\n        <md-form-field>\n            <input mdInput [mdDatepicker]=\"occurranceStart\" placeholder=\"Start Date\">\n            <md-datepicker-toggle mdSuffix [for]=\"occurranceStart\"></md-datepicker-toggle>\n            <md-datepicker touchUi=\"true\" #occurranceStart></md-datepicker>\n        </md-form-field>\n\n        <md-form-field>\n            <input mdInput placeholder=\"Start Time\" type=\"time\">\n        </md-form-field>\n\n        <md-form-field>\n            <input mdInput [mdDatepicker]=\"occurranceEnd\" placeholder=\"End Date\">\n            <md-datepicker-toggle mdSuffix [for]=\"occurranceEnd\"></md-datepicker-toggle>\n            <md-datepicker touchUi=\"true\" #occurranceEnd></md-datepicker>\n        </md-form-field>\n        <md-form-field>\n            <input mdInput placeholder=\"End Time\" type=\"time\">\n        </md-form-field>\n        <md-form-field>\n            <input mdInput placeholder=\"Location\" formControlName=\"occurranceLoc\">\n        </md-form-field>\n        <md-action-row></md-action-row>\n        <md-card-actions class=\"center\">\n            <div class=\"form-group text-center\">\n                <button md-raised-button [routerLinkActive]=\"['link-active']\" [routerLink]=\"['../newCR-people']\" type=\"submit\"> Next <md-icon>navigate_next</md-icon></button>\n            </div>\n        </md-card-actions>\n    </form>\n</md-card>";
+module.exports = "<div class=\"menu-wrap\">\n    <mat-grid-list class=\"center\" cols=\"3\" rows=\"2\" gutterSize=\"5px\">\n        <mat-grid-tile class=\"menu-tile\" [routerLink]=\"['/newCR-start']\">\n            <span class='glyphicon glyphicon-education'></span>New Crime Report\n        </mat-grid-tile>\n        <mat-grid-tile class=\"menu-tile\">2</mat-grid-tile>\n        <mat-grid-tile class=\"menu-tile\">3</mat-grid-tile>\n        <mat-grid-tile class=\"menu-tile\">4</mat-grid-tile>\n        <mat-grid-tile class=\"menu-tile\">5</mat-grid-tile>\n        <mat-grid-tile class=\"menu-tile\">6</mat-grid-tile>\n    </mat-grid-list>\n</div>";
 
 /***/ }),
 /* 37 */
 /***/ (function(module, exports) {
 
-module.exports = "<md-card class=\"center\">\n    <form [formGroup]=\"formShell\" (ngSubmit)=\"save(formShell)\">\n\n        <!-- Begin People Array -->\n\n        <div formArrayName=\"people\">\n            <div *ngFor=\"let person of formShell.controls.people.controls; let i=index\" class=\"panel panel-default\">\n                <!-- Angular assigns array index as group name by default 0, 1, 2, ... -->\n                <div [formGroupName]=\"i\">\n                    <md-expansion-panel [expanded]=\"true\">\n                        <md-expansion-panel-header>\n                            <md-panel-title>\n                                Person {{i + 1}}\n                            </md-panel-title>\n                            <md-panel-description>\n                                <md-icon class=\"pull-right\" *ngIf=\"formShell.controls.people.controls.length > 1\" (click)=\"removePerson(i)\">delete</md-icon>\n                            </md-panel-description>\n                        </md-expansion-panel-header>\n\n                        <md-form-field>\n                            <input mdInput placeholder=\"Last Name\" formControlName=\"lastName\">\n                        </md-form-field>\n                        <md-form-field>\n                            <input mdInput placeholder=\"First Name\" formControlName=\"firstName\">\n                        </md-form-field>\n\n                        <md-form-field>\n                            <input mdInput placeholder=\"Middle Name\" formControlName=\"middleName\">\n                        </md-form-field>\n\n                        <div class=\"panel\">\n                            <div formArrayName=\"addresses\">\n                                <div *ngFor=\"let address of person.controls.addresses.controls; let j=index\" class=\"panel panel-primary\">\n                                    <div class=\"panel-heading\">\n                                        <span>Address {{j + 1}}</span>\n                                        <md-icon class=\"pull-right\" *ngIf=\"person.controls.addresses.controls.length > 1\" (click)=\"removeAddress(person, j)\">delete</md-icon>\n                                    </div>\n                                    <div class=\"panel-body\" [formGroupName]=\"j\">\n                                        <div>\n                                            <md-form-field class=\"col-xs-12\">\n                                                <input mdInput placeholder=\"Address\" formControlName=\"street\" [mdAutocomplete]=\"auto\">\n                                            </md-form-field>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n\n                        <button (click)=\"addAddress(person)\" class=\"btn btn-primary\">\n                                Add another Address +\n                            </button>\n                    </md-expansion-panel>\n                </div>\n            </div>\n        </div>\n\n        <!-- End People Array-->\n        <!-- Submit Button-->\n        <div>\n            <div>\n                <button md-raised-button color=\"primary\" (click)=\"addPerson()\">Add person<md-icon class=\"pull-right\">person_add</md-icon></button>\n            </div>\n        </div>\n        <md-action-row> </md-action-row>\n        <md-card-actions>\n            <div class=\"form-group text-center\">\n                <button md-raised-button type=\"submit\"><md-icon>navigate_before</md-icon>Previous </button>\n                <button md-raised-button type=\"submit\"> Next <md-icon>navigate_next</md-icon></button>\n            </div>\n        </md-card-actions>\n\n    </form>\n</md-card>";
+module.exports = "<mat-card class=\"center\">\n    <form [formGroup]=\"detailsForm\" (ngSubmit)=\"save(detailsForm)\">\n        <div class=\"tab-pane fade in active\">\n            <h4 class=\"text-center\">{{title}}</h4>\n        </div>\n\n        <mat-form-field>\n            <input matInput placeholder=\"Report Title\" formControlName=\"reportTitle\">\n        </mat-form-field>\n        <p>\n            <mat-form-field>\n                <input matInput placeholder=\"Incident Number\" formControlName=\"incidentNum\">\n            </mat-form-field>\n        </p>\n        <mat-form-field>\n            <input matInput [matDatepicker]=\"occurranceStart\" placeholder=\"Start Date\">\n            <mat-datepicker-toggle matSuffix [for]=\"occurranceStart\"></mat-datepicker-toggle>\n            <mat-datepicker touchUi=\"true\" #occurranceStart></mat-datepicker>\n        </mat-form-field>\n\n        <mat-form-field>\n            <input matInput placeholder=\"Start Time\" type=\"time\">\n        </mat-form-field>\n\n        <mat-form-field>\n            <input matInput [matDatepicker]=\"occurranceEnd\" placeholder=\"End Date\">\n            <mat-datepicker-toggle matSuffix [for]=\"occurranceEnd\"></mat-datepicker-toggle>\n            <mat-datepicker touchUi=\"true\" #occurranceEnd></mat-datepicker>\n        </mat-form-field>\n        <mat-form-field>\n            <input matInput placeholder=\"End Time\" type=\"time\">\n        </mat-form-field>\n        <mat-form-field>\n            <input matInput placeholder=\"Location\" formControlName=\"occurranceLoc\">\n        </mat-form-field>\n        <mat-action-row></mat-action-row>\n        <mat-card-actions class=\"center\">\n            <div class=\"form-group text-center\">\n                <button mat-raised-button [routerLinkActive]=\"['link-active']\" [routerLink]=\"['../newCR-people']\" type=\"submit\"> Next <mat-icon>navigate_next</mat-icon></button>\n            </div>\n        </mat-card-actions>\n    </form>\n</mat-card>";
 
 /***/ }),
 /* 38 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"menu-wrap center\" flex=\"50\">\n    <nav class=\"app-menu\">\n        <div class=\"menu-item\" [routerLinkActive]=\"['link-active']\">\n            <a [routerLink]=\"['./newCR-details']\">\n                <span class=\"item-number\">1</span>\n                <div class=\"menu-text\">Details</div>\n            </a>\n        </div>\n\n        <div class=\"menu-item\" [routerLinkActive]=\"['link-active']\">\n            <a [routerLink]=\"['./newCR-people']\">\n                <span class=\"item-number\">2</span>\n                <div class=\"menu-text\">People</div>\n            </a>\n        </div>\n        <div class=\"menu-item\">\n            <a>\n                <span class=\"item-number\">3</span>\n                <div class=\"menu-text\">Cars</div>\n            </a>\n        </div>\n        <div class=\"menu-item\">\n            <a>\n                <span class=\"item-number\">4</span>\n                <div class=\"menu-text\">Weapons</div>\n            </a>\n        </div>\n        <div class=\"menu-item\">\n            <a>\n                <span class=\"item-number\">5</span>\n                <div class=\"menu-text\">Summary</div>\n            </a>\n        </div>\n    </nav>\n</div>";
+module.exports = "<mat-card class=\"center\">\n    <form [formGroup]=\"formShell\" (ngSubmit)=\"save(formShell)\">\n        <mat-vertical-stepper>\n            <mat-step label=\"Role\">\n                <mat-card class=\"center\">\n                    <h4>This person is a...</h4>\n                    <mat-grid-list class=\"center\" cols=\"1\" gutterSize=\"5px\">\n                        <mat-grid-tile>\n                            <button mat-raised-button class='step-button' matStepperNext>Victim</button>\n                        </mat-grid-tile>\n                        <mat-grid-tile>\n                            <button mat-raised-button class='step-button' matStepperNext>Suspect</button>\n                        </mat-grid-tile>\n                        <mat-grid-tile>\n                            <button mat-raised-button class='step-button' matStepperNext>Witness</button>\n                        </mat-grid-tile>\n                    </mat-grid-list>\n                </mat-card>\n            </mat-step>\n            <mat-step label=\"Personal Info\">\n                <mat-card class=\"center\">\n                    <h4>Enter this person by...</h4>\n                    <mat-grid-list class=\"center\" cols=\"1\" gutterSize=\"5px\">\n                        <mat-grid-tile>\n                            <button mat-raised-button class='step-button' matStepperNext>Scan ID</button>\n                        </mat-grid-tile>\n                        <mat-grid-tile>\n                            <button mat-raised-button class='step-button' matStepperNext>Name/ID Search</button>\n                        </mat-grid-tile>\n                        <mat-grid-tile>\n                            <button mat-raised-button class='step-button' matStepperNext>Manual Entry</button>\n                        </mat-grid-tile>\n                    </mat-grid-list>\n                </mat-card>\n                <div>\n                    <button mat-raised-button matStepperPrevious>Back</button>\n                </div>\n            </mat-step>\n            <mat-step label=\"Involved Vehicles\">\n                <input MdInput placeholder=\"3\">\n                <div>\n                    <button mat-button matStepperPrevious>Back</button>\n                    <button mat-button matStepperNext>Next</button>\n                </div>\n            </mat-step>\n\n\n\n        </mat-vertical-stepper>\n\n\n    </form>\n</mat-card>";
 
 /***/ }),
 /* 39 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n    <div class=\"row\">\n        <newCR-progBar></newCR-progBar>\n    </div>\n    <div class=\"row\">\n        <form id=\"msform\">\n            <router-outlet></router-outlet>\n        </form>\n    </div>\n    <div class=\"center\">\n        <pre> {{ reportFormData.value | json }}</pre>\n    </div>\n</div>";
+module.exports = "<div class=\"menu-wrap center\" flex=\"50\">\n    <nav class=\"app-menu\">\n        <div class=\"menu-item\" [routerLinkActive]=\"['link-active']\">\n            <a [routerLink]=\"['./newCR-details']\">\n                <span class=\"item-number\">1</span>\n                <div class=\"menu-text\">Details</div>\n            </a>\n        </div>\n\n        <div class=\"menu-item\" [routerLinkActive]=\"['link-active']\">\n            <a [routerLink]=\"['./newCR-people']\">\n                <span class=\"item-number\">2</span>\n                <div class=\"menu-text\">People</div>\n            </a>\n        </div>\n        <div class=\"menu-item\">\n            <a>\n                <span class=\"item-number\">3</span>\n                <div class=\"menu-text\">Cars</div>\n            </a>\n        </div>\n        <div class=\"menu-item\">\n            <a>\n                <span class=\"item-number\">4</span>\n                <div class=\"menu-text\">Weapons</div>\n            </a>\n        </div>\n        <div class=\"menu-item\">\n            <a>\n                <span class=\"item-number\">5</span>\n                <div class=\"menu-text\">Summary</div>\n            </a>\n        </div>\n    </nav>\n</div>";
 
 /***/ }),
 /* 40 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n    <div class=\"row\">\n        <newCR-progBar></newCR-progBar>\n    </div>\n    <div class=\"row\">\n        <form id=\"msform\">\n            <router-outlet></router-outlet>\n        </form>\n    </div>\n    <div class=\"center\">\n        <pre> {{ reportFormData.value | json }}</pre>\n    </div>\n</div>";
+
+/***/ }),
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8437,7 +8453,7 @@ var isArray = Array.isArray || function (xs) {
 
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8529,18 +8545,18 @@ var objectKeys = Object.keys || function (obj) {
 
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-exports.decode = exports.parse = __webpack_require__(40);
-exports.encode = exports.stringify = __webpack_require__(41);
+exports.decode = exports.parse = __webpack_require__(41);
+exports.encode = exports.stringify = __webpack_require__(42);
 
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process, global) {/*! *****************************************************************************
@@ -9668,34 +9684,20 @@ var Reflect;
             Function("return this;")());
 })(Reflect || (Reflect = {}));
 //# sourceMappingURL=Reflect.js.map
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(53), __webpack_require__(50)))
-
-/***/ }),
-/* 44 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var ansiRegex = __webpack_require__(22)();
-
-module.exports = function (str) {
-	return typeof str === 'string' ? str.replace(ansiRegex, '') : str;
-};
-
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(54), __webpack_require__(51)))
 
 /***/ }),
 /* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
 
-        var result = __webpack_require__(28);
+var ansiRegex = __webpack_require__(23)();
 
-        if (typeof result === "string") {
-            module.exports = result;
-        } else {
-            module.exports = result.toString();
-        }
-    
+module.exports = function (str) {
+	return typeof str === 'string' ? str.replace(ansiRegex, '') : str;
+};
+
 
 /***/ }),
 /* 46 */
@@ -9713,6 +9715,20 @@ module.exports = function (str) {
 
 /***/ }),
 /* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+        var result = __webpack_require__(30);
+
+        if (typeof result === "string") {
+            module.exports = result;
+        } else {
+            module.exports = result.toString();
+        }
+    
+
+/***/ }),
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*eslint-env browser*/
@@ -9741,7 +9757,7 @@ for (var key in styles) {
   clientOverlay.style[key] = styles[key];
 }
 
-var ansiHTML = __webpack_require__(21);
+var ansiHTML = __webpack_require__(22);
 var colors = {
   reset: ['transparent', 'transparent'],
   black: '181818',
@@ -9756,7 +9772,7 @@ var colors = {
 };
 ansiHTML.setColors(colors);
 
-var Entities = __webpack_require__(31).AllHtmlEntities;
+var Entities = __webpack_require__(32).AllHtmlEntities;
 var entities = new Entities();
 
 exports.showProblems =
@@ -9797,7 +9813,7 @@ function problemType (type) {
 
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -9935,7 +9951,7 @@ module.exports = function(hash, moduleMap, options) {
 
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -9963,34 +9979,28 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(0))(27);
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(0))(3);
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(0))(48);
 
 /***/ }),
-/* 53 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = (__webpack_require__(0))(54);
-
-/***/ }),
 /* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(0))(72);
+module.exports = (__webpack_require__(0))(54);
 
 /***/ }),
 /* 55 */
@@ -10020,9 +10030,9 @@ module.exports = (__webpack_require__(0))(82);
 /* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(19);
 __webpack_require__(18);
-__webpack_require__(17);
-module.exports = __webpack_require__(16);
+module.exports = __webpack_require__(17);
 
 
 /***/ })

@@ -1,4 +1,4 @@
-﻿md-grid-tile {
+﻿mat-grid-tile {
     background: lightblue;
 }
 
@@ -25,6 +25,12 @@
 
 .entry-method-button {
     margin: 5px;
+}
+
+.step-button {
+    height: 98%;
+    width: 98%;
+    font-size: 16px;
 }
 
 

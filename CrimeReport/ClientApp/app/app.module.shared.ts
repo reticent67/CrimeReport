@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
+import {MATERIAL_COMPATIBILITY_MODE} from '@angular/material';
 import { AppRoutes } from './app.routes';
 
 import { AppComponent } from './components/app/app.component';
@@ -16,15 +17,19 @@ import { NewCRPeopleComponent } from './components/newCrimeReport/newCR.people.c
 
 
 
+
 @NgModule({
+    providers:[
+        {provide: MATERIAL_COMPATIBILITY_MODE, useValue: true}
+    ],
+    
     declarations: [
         AppComponent,
         MainMenuComponent,
         NewCRStartComponent,
         NewCRProgBarComponent,
         NewCRDetailsComponent,
-        NewCRPeopleComponent,
-        
+        NewCRPeopleComponent,      
         
     ],
     imports: [

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ReportService } from '../../services/ReportService';
 import { ReportPerson, PersonAddress } from '../../models/reportForm.model';
 import { Validators, FormGroup, FormArray, FormBuilder } from '@angular/forms';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 
 
 @Component({
@@ -18,18 +19,17 @@ export class NewCRPeopleComponent implements OnInit {
 
 
 
-    constructor(private reportFormDataService: ReportService, private _fb: FormBuilder) {
+    constructor(private reportFormDataService: ReportService, private _fb: FormBuilder, public dialog: MatDialog) {
 
     }
+   
 
     ngOnInit() {
-
         this.formShell = this._fb.group({
             people: this._fb.array([
                 this.initPerson(),
             ])
         });
-
     }
 
     initPerson() {
@@ -95,3 +95,4 @@ export class NewCRPeopleComponent implements OnInit {
     }
 
 }
+
