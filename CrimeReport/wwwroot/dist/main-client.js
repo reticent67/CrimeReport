@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "bdd568de19388122844f"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "106e1937a876927e772a"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -1046,11 +1046,12 @@ var NewCRDetailsComponent = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewCRPeopleComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_ReportService__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_reportForm_model__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_material__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__models_reportDialogs_model__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_ReportService__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_reportForm_model__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_material__ = __webpack_require__(6);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1060,6 +1061,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -1092,10 +1094,17 @@ var NewCRPeopleComponent = (function () {
     NewCRPeopleComponent.prototype.addPerson = function () {
         var personArray = this.formShell.controls['people'];
         personArray.push(this.initPerson());
+        this.openDialog();
     };
     NewCRPeopleComponent.prototype.removePerson = function (index) {
         var personArray = this.formShell.controls['people'];
         personArray.removeAt(index);
+    };
+    NewCRPeopleComponent.prototype.openDialog = function () {
+        var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_0__models_reportDialogs_model__["a" /* PersonRoleDialog */], {
+            width: '250px',
+            data: {}
+        });
     };
     NewCRPeopleComponent.prototype.initAddress = function () {
         return this._fb.group({
@@ -1115,13 +1124,13 @@ var NewCRPeopleComponent = (function () {
         var people = form.get('people');
         console.log(people.value);
         for (var i = 0; i < people.length; i++) {
-            var p = new __WEBPACK_IMPORTED_MODULE_2__models_reportForm_model__["a" /* ReportPerson */];
+            var p = new __WEBPACK_IMPORTED_MODULE_3__models_reportForm_model__["a" /* ReportPerson */];
             p.lastName = people.at(i).get('lastName').value;
             p.firstName = people.at(i).get('firstName').value;
             p.middleName = people.at(i).get('middleName').value;
             var addresses = people.at(i).get('addresses');
             for (var j = 0; j < addresses.length; j++) {
-                var a = new __WEBPACK_IMPORTED_MODULE_2__models_reportForm_model__["b" /* PersonAddress */];
+                var a = new __WEBPACK_IMPORTED_MODULE_3__models_reportForm_model__["b" /* PersonAddress */];
                 a.street = addresses.at(j).get('street').value;
                 p.addresses.push(a);
             }
@@ -1131,12 +1140,12 @@ var NewCRPeopleComponent = (function () {
         this.reportFormDataService.setReportPeople(reportPersonList);
     };
     NewCRPeopleComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
             selector: 'newCR-people',
             template: __webpack_require__(38),
             styles: [__webpack_require__(2)]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_ReportService__["a" /* ReportService */], __WEBPACK_IMPORTED_MODULE_3__angular_forms__["FormBuilder"], __WEBPACK_IMPORTED_MODULE_4__angular_material__["MatDialog"]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_ReportService__["a" /* ReportService */], __WEBPACK_IMPORTED_MODULE_4__angular_forms__["FormBuilder"], __WEBPACK_IMPORTED_MODULE_5__angular_material__["MatDialog"]])
     ], NewCRPeopleComponent);
     return NewCRPeopleComponent;
 }());
@@ -7750,12 +7759,14 @@ function getBaseUrl() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_newCrimeReport_newCR_progBar_component__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_newCrimeReport_newCR_details_component__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_newCrimeReport_newCR_people_component__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__models_reportDialogs_model__ = __webpack_require__(60);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -7785,6 +7796,10 @@ var AppModuleShared = (function () {
                 __WEBPACK_IMPORTED_MODULE_11__components_newCrimeReport_newCR_progBar_component__["a" /* NewCRProgBarComponent */],
                 __WEBPACK_IMPORTED_MODULE_12__components_newCrimeReport_newCR_details_component__["a" /* NewCRDetailsComponent */],
                 __WEBPACK_IMPORTED_MODULE_13__components_newCrimeReport_newCR_people_component__["a" /* NewCRPeopleComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__models_reportDialogs_model__["a" /* PersonRoleDialog */]
+            ],
+            entryComponents: [
+                __WEBPACK_IMPORTED_MODULE_14__models_reportDialogs_model__["a" /* PersonRoleDialog */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
@@ -8347,7 +8362,7 @@ module.exports = "<mat-card class=\"center\">\n    <form [formGroup]=\"detailsFo
 /* 38 */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-card class=\"center\">\n    <form [formGroup]=\"formShell\" (ngSubmit)=\"save(formShell)\">\n        <mat-vertical-stepper>\n            <mat-step label=\"Role\">\n                <mat-card class=\"center\">\n                    <h4>This person is a...</h4>\n                    <mat-grid-list class=\"center\" cols=\"1\" gutterSize=\"5px\">\n                        <mat-grid-tile>\n                            <button mat-raised-button class='step-button' matStepperNext>Victim</button>\n                        </mat-grid-tile>\n                        <mat-grid-tile>\n                            <button mat-raised-button class='step-button' matStepperNext>Suspect</button>\n                        </mat-grid-tile>\n                        <mat-grid-tile>\n                            <button mat-raised-button class='step-button' matStepperNext>Witness</button>\n                        </mat-grid-tile>\n                    </mat-grid-list>\n                </mat-card>\n            </mat-step>\n            <mat-step label=\"Personal Info\">\n                <mat-card class=\"center\">\n                    <h4>Enter this person by...</h4>\n                    <mat-grid-list class=\"center\" cols=\"1\" gutterSize=\"5px\">\n                        <mat-grid-tile>\n                            <button mat-raised-button class='step-button' matStepperNext>Scan ID</button>\n                        </mat-grid-tile>\n                        <mat-grid-tile>\n                            <button mat-raised-button class='step-button' matStepperNext>Name/ID Search</button>\n                        </mat-grid-tile>\n                        <mat-grid-tile>\n                            <button mat-raised-button class='step-button' matStepperNext>Manual Entry</button>\n                        </mat-grid-tile>\n                    </mat-grid-list>\n                </mat-card>\n                <div>\n                    <button mat-raised-button matStepperPrevious>Back</button>\n                </div>\n            </mat-step>\n            <mat-step label=\"Involved Vehicles\">\n                <input MdInput placeholder=\"3\">\n                <div>\n                    <button mat-button matStepperPrevious>Back</button>\n                    <button mat-button matStepperNext>Next</button>\n                </div>\n            </mat-step>\n\n\n\n        </mat-vertical-stepper>\n\n\n    </form>\n</mat-card>";
+module.exports = "<mat-card class=\"center\">\n    <form [formGroup]=\"formShell\" (ngSubmit)=\"save(formShell)\">\n\n        <!-- Begin People Array -->\n        <div formArrayName=\"people\">\n            <div *ngFor=\"let person of formShell.controls.people.controls; let i=index\" class=\"panel panel-default\">\n                <!-- Angular assigns array index as group name by default 0, 1, 2, ... -->\n                <div [formGroupName]=\"i\">\n\n                </div>\n            </div>\n        </div>\n\n        <!-- End People Array-->\n        <!-- Submit Button-->\n        <div>\n            <div>\n                <button mat-raised-button color=\"primary\" (click)=\"addPerson()\">Add person<mat-icon class=\"pull-right\">person_add</mat-icon></button>\n            </div>\n        </div>\n\n        <mat-card-actions>\n            <div class=\"form-group text-center\">\n                <button mat-raised-button type=\"submit\"><mat-icon>navigate_before</mat-icon>Previous </button>\n                <button mat-raised-button type=\"submit\"> Next <mat-icon>navigate_next</mat-icon></button>\n            </div>\n        </mat-card-actions>\n\n    </form>\n</mat-card>";
 
 /***/ }),
 /* 39 */
@@ -10034,6 +10049,55 @@ __webpack_require__(19);
 __webpack_require__(18);
 module.exports = __webpack_require__(17);
 
+
+/***/ }),
+/* 60 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PersonRoleDialog; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__(6);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+var PersonRoleDialog = (function () {
+    function PersonRoleDialog(dialogRef, data) {
+        this.dialogRef = dialogRef;
+        this.data = data;
+    }
+    PersonRoleDialog.prototype.onNoClick = function () {
+        this.dialogRef.close();
+    };
+    PersonRoleDialog = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'personrole-dialog',
+            template: __webpack_require__(61)
+        }),
+        __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["MAT_DIALOG_DATA"])),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_material__["MatDialogRef"], Object])
+    ], PersonRoleDialog);
+    return PersonRoleDialog;
+}());
+
+
+
+/***/ }),
+/* 61 */
+/***/ (function(module, exports) {
+
+module.exports = "";
 
 /***/ })
 /******/ ]);

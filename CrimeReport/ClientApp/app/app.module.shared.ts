@@ -13,6 +13,7 @@ import { NewCRStartComponent } from './components/newCrimeReport/newCR.start.com
 import { NewCRProgBarComponent } from './components/newCrimeReport/newCR.progBar.component';
 import { NewCRDetailsComponent } from './components/newCrimeReport/newCR.details.component';
 import { NewCRPeopleComponent } from './components/newCrimeReport/newCR.people.component';
+import { PersonRoleDialog  } from "./models/reportDialogs.model";
 
 
 
@@ -29,9 +30,14 @@ import { NewCRPeopleComponent } from './components/newCrimeReport/newCR.people.c
         NewCRStartComponent,
         NewCRProgBarComponent,
         NewCRDetailsComponent,
-        NewCRPeopleComponent,      
+        NewCRPeopleComponent,  
+        PersonRoleDialog    
         
     ],
+    entryComponents: [
+        PersonRoleDialog
+    ],
+
     imports: [
         CommonModule,
         HttpModule,
@@ -41,6 +47,7 @@ import { NewCRPeopleComponent } from './components/newCrimeReport/newCR.people.c
         MaterialModule,
         AppRoutes
     ]
+
 })
 export class AppModuleShared {
 }

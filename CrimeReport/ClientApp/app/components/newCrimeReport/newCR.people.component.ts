@@ -1,3 +1,4 @@
+import { PersonRoleDialog } from './../../models/reportDialogs.model';
 import { Component, OnInit } from '@angular/core';
 import { ReportService } from '../../services/ReportService';
 import { ReportPerson, PersonAddress } from '../../models/reportForm.model';
@@ -17,12 +18,7 @@ export class NewCRPeopleComponent implements OnInit {
     formShell: FormGroup;
     index: number;
 
-
-
-    constructor(private reportFormDataService: ReportService, private _fb: FormBuilder, public dialog: MatDialog) {
-
-    }
-   
+    constructor(private reportFormDataService: ReportService, private _fb: FormBuilder, public dialog: MatDialog) {}   
 
     ngOnInit() {
         this.formShell = this._fb.group({
@@ -46,11 +42,20 @@ export class NewCRPeopleComponent implements OnInit {
     addPerson() {
         const personArray = <FormArray>this.formShell.controls['people'];
         personArray.push(this.initPerson());
+        this.openDialog();
     }
+
 
     removePerson(index: number) {
         const personArray = <FormArray>this.formShell.controls['people'];
         personArray.removeAt(index);
+    }
+
+    openDialog(): void{
+        let dialogRef = this.dialog.open(PersonRoleDialog, {
+            width: '250px',
+            data: {}
+        })
     }
 
     initAddress() {
@@ -70,7 +75,6 @@ export class NewCRPeopleComponent implements OnInit {
         addressArray.removeAt(index);
 
     }
-
 
     save(form: any) {
         var reportPersonList: ReportPerson[] = new Array();
