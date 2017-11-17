@@ -10,9 +10,15 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
+<<<<<<< HEAD
             "program": "${workspaceFolder}/CrimeReport/bin/Debug/netcoreapp2.0/CrimeReport.dll",
             "args": [],
             "cwd": "${workspaceFolder}/CrimeReport",
+=======
+            "program": "${workspaceRoot}/CrimeReport/bin/Debug/netcoreapp2.0/CrimeReport.dll",
+            "args": [],
+            "cwd": "${workspaceRoot}/CrimeReport",
+>>>>>>> 623772e936b3624aee186f0780a88f06844d2589
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart",
             "launchBrowser": {
@@ -33,7 +39,11 @@
                 "ASPNETCORE_ENVIRONMENT": "Development"
             },
             "sourceFileMap": {
+<<<<<<< HEAD
                 "/Views": "${workspaceFolder}/Views"
+=======
+                "/Views": "${workspaceRoot}/Views"
+>>>>>>> 623772e936b3624aee186f0780a88f06844d2589
             }
         },
         {

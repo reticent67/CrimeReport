@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
+<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrimeReport", "CrimeReport\CrimeReport.csproj", "{F5121409-3627-4131-92C3-8556EB51722E}"
+=======
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrimeReport", "CrimeReport\CrimeReport.csproj", "{C7504181-0526-4392-96C0-2B3D84A2B0A9}"
+>>>>>>> 623772e936b3624aee186f0780a88f06844d2589
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +15,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+<<<<<<< HEAD
 		{F5121409-3627-4131-92C3-8556EB51722E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F5121409-3627-4131-92C3-8556EB51722E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5121409-3627-4131-92C3-8556EB51722E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5121409-3627-4131-92C3-8556EB51722E}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		{C7504181-0526-4392-96C0-2B3D84A2B0A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7504181-0526-4392-96C0-2B3D84A2B0A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7504181-0526-4392-96C0-2B3D84A2B0A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7504181-0526-4392-96C0-2B3D84A2B0A9}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> 623772e936b3624aee186f0780a88f06844d2589
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
+<<<<<<< HEAD
 		SolutionGuid = {64AC3317-27C1-4767-AB8E-A23FB70889DE}
+=======
+		SolutionGuid = {F26AEF65-BC84-42BB-B4F4-710684BC7EB9}
+>>>>>>> 623772e936b3624aee186f0780a88f06844d2589
 	EndGlobalSection
 EndGlobal

@@ -6,15 +6,24 @@
     "test": "karma start ClientApp/test/karma.conf.js"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@angular/animations": "^4.2.5",
     "@angular/cdk": "^2.0.0-beta.10",
+=======
+    "@angular/animations": "4.2.5",
+    "@angular/cdk": "^2.0.0-beta.11",
+>>>>>>> 623772e936b3624aee186f0780a88f06844d2589
     "@angular/common": "4.2.5",
     "@angular/compiler": "4.2.5",
     "@angular/compiler-cli": "4.2.5",
     "@angular/core": "4.2.5",
     "@angular/forms": "4.2.5",
     "@angular/http": "4.2.5",
+<<<<<<< HEAD
     "@angular/material": "^2.0.0-beta.10",
+=======
+    "@angular/material": "^2.0.0-beta.11",
+>>>>>>> 623772e936b3624aee186f0780a88f06844d2589
     "@angular/platform-browser": "4.2.5",
     "@angular/platform-browser-dynamic": "4.2.5",
     "@angular/platform-server": "4.2.5",
@@ -33,9 +42,17 @@
     "expose-loader": "0.7.3",
     "extract-text-webpack-plugin": "2.1.2",
     "file-loader": "0.11.2",
+<<<<<<< HEAD
     "html-loader": "0.4.5",
     "isomorphic-fetch": "2.2.1",
     "jquery": "3.2.1",
+=======
+    "hammerjs": "^2.0.8",
+    "html-loader": "0.4.5",
+    "isomorphic-fetch": "2.2.1",
+    "jquery": "3.2.1",
+    "jshint": "^2.9.5",
+>>>>>>> 623772e936b3624aee186f0780a88f06844d2589
     "json-loader": "0.5.4",
     "preboot": "4.5.2",
     "raw-loader": "0.5.1",
@@ -44,6 +61,10 @@
     "style-loader": "0.18.2",
     "to-string-loader": "1.1.5",
     "typescript": "2.4.1",
+<<<<<<< HEAD
+=======
+    "update": "^0.7.4",
+>>>>>>> 623772e936b3624aee186f0780a88f06844d2589
     "url-loader": "0.5.9",
     "webpack": "2.5.1",
     "webpack-hot-middleware": "2.18.2",

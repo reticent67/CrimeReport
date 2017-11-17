@@ -3,7 +3,11 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+<<<<<<< HEAD
     <TypeScriptToolsVersion>latest</TypeScriptToolsVersion>
+=======
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+>>>>>>> 623772e936b3624aee186f0780a88f06844d2589
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 

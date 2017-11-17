@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+<<<<<<< HEAD
 
 
 import { AppComponent } from './components/app/app.component';
@@ -16,11 +17,27 @@ import { IntakeDetailsComponent } from './components/intake/intake.details.compo
 import { IntakePeopleComponent } from './components/intake/intake.people.component';
 import { AppRoutes } from "./app.routes";
 import { ReportService } from "./services/ReportService";
+=======
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
+import {MATERIAL_COMPATIBILITY_MODE} from '@angular/material';
+import { AppRoutes } from './app.routes';
+
+import { AppComponent } from './components/app/app.component';
+import { MainMenuComponent } from './components/mainmenu/mainmenu.component';
+import { NewCRStartComponent } from './components/newCrimeReport/newCR.start.component';
+import { NewCRProgBarComponent } from './components/newCrimeReport/newCR.progBar.component';
+import { NewCRDetailsComponent } from './components/newCrimeReport/newCR.details.component';
+import { NewCRPeopleComponent } from './components/newCrimeReport/newCR.people.component';
+import { PersonRoleDialog  } from "./models/reportDialogs.model";
+
+>>>>>>> 623772e936b3624aee186f0780a88f06844d2589
 
 
 
 
 @NgModule({
+<<<<<<< HEAD
     declarations: [
         AppComponent,       
         HomeComponent,
@@ -34,6 +51,24 @@ import { ReportService } from "./services/ReportService";
 
     providers: [
         ReportService
+=======
+    providers:[
+        {provide: MATERIAL_COMPATIBILITY_MODE, useValue: true}
+    ],
+    
+    declarations: [
+        AppComponent,
+        MainMenuComponent,
+        NewCRStartComponent,
+        NewCRProgBarComponent,
+        NewCRDetailsComponent,
+        NewCRPeopleComponent,  
+        PersonRoleDialog    
+        
+    ],
+    entryComponents: [
+        PersonRoleDialog
+>>>>>>> 623772e936b3624aee186f0780a88f06844d2589
     ],
 
     imports: [
@@ -41,9 +76,17 @@ import { ReportService } from "./services/ReportService";
         HttpModule,
         FormsModule,
         ReactiveFormsModule,
+<<<<<<< HEAD
         AppRoutes
        
     ]
+=======
+        BrowserAnimationsModule, 
+        MaterialModule,
+        AppRoutes
+    ]
+
+>>>>>>> 623772e936b3624aee186f0780a88f06844d2589
 })
 export class AppModuleShared {
 }
